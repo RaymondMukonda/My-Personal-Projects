@@ -12,7 +12,7 @@ p {
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background: url(image.jpg) no-repeat center/cover;
+	background: url(nature.jpg) no-repeat center/cover;
 	background-attachment: fixed;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: rgb(225, 225, 255, 0);
