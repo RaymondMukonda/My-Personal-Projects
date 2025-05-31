@@ -3,6 +3,60 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 216, 216);
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+}
+
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+    cursor: pointer;
+
+}
+
+.sidebar-link {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.sidebar-link img {
+    height: 24px;
+    margin-bottom: 4px;
+
+}
+
+.sidebar-link div {
+    font-family: Roboto, Arial;
+    font-size: 10px;
 }
 
 .right-section {
@@ -26,6 +80,25 @@
 
 .notifications {
     height: 24px;
+}
+
+.notifications-container {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
 }
 
 .current-user-profile {
@@ -58,6 +131,32 @@
     margin-right: 10px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+
+
+}
+
+.search-button .tooltip, 
+.voice-button .tooltip {
+    background-color: gray;
+    position: absolute;
+    color: white;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0,15s;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip {
+    opacity: 1;
 }
 
 .search-bar {
@@ -78,6 +177,14 @@
     font-size: 17px;
 }
 
+.search-button,
+.voice-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .voice-button {
     height: 40px;
     width: 40px;
@@ -88,12 +195,11 @@
 
 .voice-search-icon {
     height: 24px;
-    margin-top: 4px;
 }
 
 .search-icon {
     height: 24px;
-    margin-top: 4px;
+
 }
 
 
