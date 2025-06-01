@@ -136,7 +136,9 @@
 }
 
 .search-button .tooltip, 
-.voice-button .tooltip {
+.voice-button .tooltip,
+.upload-icon-container .tooltip {
+    font-family: Roboto, Arial;
     background-color: gray;
     position: absolute;
     color: white;
@@ -155,7 +157,8 @@
 }
 
 .search-button:hover .tooltip,
-.voice-button:hover .tooltip {
+.voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip {
     opacity: 1;
 }
 
@@ -178,7 +181,8 @@
 }
 
 .search-button,
-.voice-button {
+.voice-button,
+.upload-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;

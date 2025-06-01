@@ -56,6 +56,24 @@
             row-gap: 40px;
         }
 
+        @media (max-width: 750px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 751px) and ( max-width:999px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 100px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
 
     </style>
 </head>
@@ -79,12 +97,22 @@
         </div>
 
         <div class="right-section">
-            <img class="upload-icon" src="images/upload.svg">
-            <img class="youtube-apps-icon" src="images/youtube-apps.svg">
-            <div class="notifications-container">
-                <img class="notifications" src="images/notifications.svg">
-                <dic class="notifications-count">6</dic>
+            <div class="upload-icon-container"> 
+                <img class="upload-icon" src="images/upload.svg">
+                <div class="tooltip">Create</div>
             </div>
+            <div class="upload-icon-container">
+                <img class="youtube-apps-icon" src="images/youtube-apps.svg">
+                <div class="tooltip">YouTube apps</div>
+            </div>
+            <div class="upload-icon-container">
+                <div class="notifications-container">
+                    <img class="notifications" src="images/notifications.svg">
+                    <dic class="notifications-count">6</dic>
+                    <div class="tooltip">Notifications</div>
+                </div>
+            </div>
+            
             <img class="current-user-profile" src="images/youtube-profile.jpg">
         </div>
     </div>
