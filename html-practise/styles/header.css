@@ -138,7 +138,7 @@
 .search-button .tooltip, 
 .voice-button .tooltip,
 .upload-icon-container .tooltip {
-    font-family: Roboto, Arial;
+
     background-color: gray;
     position: absolute;
     color: white;
@@ -176,7 +176,6 @@
 }
 
 .search-bar ::placeholder {
-    font-family: Roboto, Arial;
     font-size: 17px;
 }
 
