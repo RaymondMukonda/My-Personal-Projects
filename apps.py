@@ -1,38 +1,65 @@
-# # Define our 3 functions
-# def my_function():
-#     print("Hello From My Function!")
+# class MyClass:
+#     variable = "blah"
 
-# def my_function_with_args(username, greeting):
-#     print("Hello, %s, From My Function!, I wish you %s"%(username, greeting))
+#     def function(self):
+#         print("This is a message inside the class.")
 
-# def sum_two_numbers(a, b):
-#     return a + b
+# myobjectx = MyClass()
 
-# # print(a simple greeting)
-# my_function()
+# myobjectx.function()
+# print(myobjectx.variable)
 
-# #prints - "Hello, John Doe, From My Function!, I wish you a great year!"
-# my_function_with_args("Raymond Mukonda", "How has your year been!")
+# phonebook = {}
+# phonebook["John"] = 938477566
+# phonebook["Jack"] = 938377264
+# phonebook["Jill"] = 947662781
+# print(phonebook)
 
-# # after this line x will hold the value 3!
-# x = print(sum_two_numbers(1,2))
+# phonebook = {
+#     "John" : 938477566,
+#     "Jack" : 938377264,
+#     "Jill" : 947662781
+# }
+# print(phonebook)
 
-# people_name = input("what is your name? ")
+# phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
+# for name, number in phonebook.items():
+#     print("Phone number of %s is %d" % (name, number))
 
-# if people_name == "raymond":
-#     (my_function_with_args("Raymond", "Hope you having a good day"))
+# phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
+# for name, number in phonebook.items():
+#     print(f"Phone number of {name} is {number}")
 
-# Modify this function to return a list of strings as defined above
-def list_benefits():
-    return ["jonh", "mike", "welcome", "key"]
+# phonebook = {
+#    "John" : 938477566,
+#    "Jack" : 938377264,
+#    "Jill" : 947662781
+# }
+# del phonebook["John"]
+# print(phonebook)
 
-# Modify this function to concatenate to each benefit - " is a benefit of functions!"
-def build_sentence(benefit):
-    return "raymond"
+# phonebook = {
+#    "John" : 938477566,
+#    "Jack" : 938377264,
+#    "Jill" : 947662781
+# }
+# phonebook.pop("John")
+# print(phonebook)
 
-def name_the_benefits_of_functions(username):
-    list_of_benefits = list_benefits()
-    for benefit in list_of_benefits:
-        print(build_sentence(benefit))
+# phonebook = {  
+#     "John" : 938477566,
+#     "Jack" : 938377264,
+#     "Jill" : 947662781
+# }  
 
-name_the_benefits_of_functions("smith")
+# # your code goes here
+# phonebook["Jake"] = 938273443  
+# del phonebook["Jill"]  
+
+# # testing code
+# if "Jake" in phonebook:  
+#     print("Jake is listed in the phonebook.")
+    
+# if "Jill" not in phonebook:      
+#     print("Jill is not listed in the phonebook.")
+
