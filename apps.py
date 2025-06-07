@@ -26,6 +26,8 @@
 
 value = 1
 
-while value < 110:
+while value < 11:
     print(value)
+    if value == 5:
+        break
     value += 1
