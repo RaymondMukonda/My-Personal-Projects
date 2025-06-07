@@ -1,7 +1,5 @@
-def hello():
-    print("Greeting's to you stranger! 👽")
+def sum(num1,num2):
+    return num1 + num2
 
-human_speak = input("are you a human? ")
-
-if human_speak.lower() == "yes":
-    hello()
+total = sum(2, 3)
+print(total)
