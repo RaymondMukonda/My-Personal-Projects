@@ -13,5 +13,19 @@
 # print(int(num1) + num2)
 # print(type(num1 and num2))
 
-value = input("please enter a value: ")
-print(value)
+# users = ["dave", "john", "rammy"]
+
+# users.append("marry")
+# users.insert(1, "jerry")
+# users.reverse()
+# mycopy = users.copy()
+# mycopy.insert(1, "susan")
+
+# print(users)
+# print(mycopy)
+
+value = 1
+
+while value < 110:
+    print(value)
+    value += 1
