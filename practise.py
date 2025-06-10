@@ -1,79 +1,78 @@
-# def sum(num1,num2):
-#     return num1 + num2
+def sum(num1,num2):
+    return num1 + num2
 
-# total = sum(2, 3)
-# print(total)
+total = sum(2, 3)
+print(total)
 
-# def multiple_items(*args):
-#     print(args)
-#     print(type(args))
+def multiple_items(*args):
+    print(args)
+    print(type(args))
 
-# multiple_items("dave", "john", "sara")
-
-
-# def mult_named_items(**kwargs):
-#     print(kwargs)
-#     print(type(kwargs))
-
-# mult_named_items(first = "Dave", last = "Gray")
-
-# value = "y"
-# count = 0
-
-# while value:
-#     count += 1
-#     print(count)
-#     if (count == 5):
-#         break
-#     else:
-#         value = 0 
-#         continue
-
-# name = "dave"
-# count = 2
-
-# def greeting():
-#     color = "blue"
-#     global count 
-#     count += 1
-#     print(count)
-
-#     def another(name):
-#         nonlocal color
-#         color = "red"
-#         print(color)
-#         print(name)
-
-#     another("rammy")
+multiple_items("dave", "john", "sara")
 
 
-# greeting()
+def mult_named_items(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
+
+mult_named_items(first = "Dave", last = "Gray")
+
+value = "y"
+count = 0
+
+while value:
+    count += 1
+    print(count)
+    if (count == 5):
+        break
+    else:
+        value = 0 
+        continue
+
+name = "dave"
+count = 2
+
+def greeting():
+    color = "blue"
+    global count 
+    count += 1
+    print(count)
+
+    def another(name):
+        nonlocal color
+        color = "red"
+        print(color)
+        print(name)
+
+    another("rammy")
 
 
-# def parent_function(person, coins):
-#     # coins = 3
+greeting()
 
-#     def play_game():
-#         nonlocal coins
-#         coins -= 1
 
-#         if coins > 1:
-#             print(f"\n{person} has {coins} coins left")
-#         elif coins == 1:
-#             print("\n" + person + " has " + str(coins) + " coin left.")
-#         else:
-#             print("\n" + person + " Is out of coins.")
+def parent_function(person, coins):
+
+    def play_game():
+        nonlocal coins
+        coins -= 1
+
+        if coins > 1:
+            print(f"\n{person} has {coins} coins left")
+        elif coins == 1:
+            print("\n" + person + " has " + str(coins) + " coin left.")
+        else:
+            print("\n" + person + " Is out of coins.")
             
 
-#     return play_game
+    return play_game
 
-# Rammy = parent_function("Rammy", 3)
-# susan = parent_function("susan", 5)
+Rammy = parent_function("Rammy", 3)
+susan = parent_function("susan", 5)
 
-# Rammy()
-# Rammy()
-# susan()
-# Rammy()
+Rammy()
+Rammy()
+susan()
+Rammy()
 
 person = "rammy"
 coins = 3
@@ -84,4 +83,21 @@ message = "\n{1} has {0} coins left." .format(coins, person)
 print(message)
 print(text)
 print(mail)
+
+
+import math 
+import random
+
+full_names = [
+    "rammy", "jake",
+    "susna", "iko"
+]
+
+computer = random.choice(full_names)
+answer = computer
+
+print(answer)
+
+
+
 
