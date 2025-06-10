@@ -50,29 +50,38 @@
 # greeting()
 
 
-def parent_function(person, coins):
-    # coins = 3
+# def parent_function(person, coins):
+#     # coins = 3
 
-    def play_game():
-        nonlocal coins
-        coins -= 1
+#     def play_game():
+#         nonlocal coins
+#         coins -= 1
 
-        if coins > 1:
-            print(f"\n{person} has {coins} coins left")
-        elif coins == 1:
-            print("\n" + person + " has " + str(coins) + " coin left.")
-        else:
-            print("\n" + person + " Is out of coins.")
+#         if coins > 1:
+#             print(f"\n{person} has {coins} coins left")
+#         elif coins == 1:
+#             print("\n" + person + " has " + str(coins) + " coin left.")
+#         else:
+#             print("\n" + person + " Is out of coins.")
             
 
-    return play_game
+#     return play_game
 
-Rammy = parent_function("Rammy", 3)
-susan = parent_function("susan", 5)
+# Rammy = parent_function("Rammy", 3)
+# susan = parent_function("susan", 5)
 
-Rammy()
-Rammy()
-susan()
-Rammy()
+# Rammy()
+# Rammy()
+# susan()
+# Rammy()
 
+person = "rammy"
+coins = 3
+
+mail = "\n%s has %s coins left." %(person,coins)
+text = "\n%s has %s coins left." %(person,coins)
+message = "\n{1} has {0} coins left." .format(coins, person)
+print(message)
+print(text)
+print(mail)
 
