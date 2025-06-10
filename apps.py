@@ -28,3 +28,21 @@ while value:
     else:
         value = 0 
         continue
+
+name = "dave"
+
+def greeting(name):
+    color = "blue"
+    print(color)
+    print(name)
+
+
+greeting("rammy")
+
+print("")
+
+def another():
+    greeting("davee")
+
+another()  
+
