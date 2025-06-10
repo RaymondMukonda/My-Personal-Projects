@@ -1,48 +1,51 @@
-def sum(num1,num2):
-    return num1 + num2
+# def sum(num1,num2):
+#     return num1 + num2
 
-total = sum(2, 3)
-print(total)
+# total = sum(2, 3)
+# print(total)
 
-def multiple_items(*args):
-    print(args)
-    print(type(args))
+# def multiple_items(*args):
+#     print(args)
+#     print(type(args))
 
-multiple_items("dave", "john", "sara")
+# multiple_items("dave", "john", "sara")
 
 
-def mult_named_items(**kwargs):
-    print(kwargs)
-    print(type(kwargs))
+# def mult_named_items(**kwargs):
+#     print(kwargs)
+#     print(type(kwargs))
 
-mult_named_items(first = "Dave", last = "Gray")
+# mult_named_items(first = "Dave", last = "Gray")
 
-value = "y"
-count = 0
+# value = "y"
+# count = 0
 
-while value:
-    count += 1
-    print(count)
-    if (count == 5):
-        break
-    else:
-        value = 0 
-        continue
+# while value:
+#     count += 1
+#     print(count)
+#     if (count == 5):
+#         break
+#     else:
+#         value = 0 
+#         continue
 
 name = "dave"
+count = 2
 
-def greeting(name):
+def greeting():
     color = "blue"
-    print(color)
-    print(name)
+    global count 
+    count += 1
+    print(count)
+
+    def another(name):
+        nonlocal color
+        color = "red"
+        print(color)
+        print(name)
+
+    another("rammy")
 
 
-greeting("rammy")
-
-print("")
-
-def another():
-    greeting("davee")
-
-another()  
+greeting()
 
