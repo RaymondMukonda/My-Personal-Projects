@@ -4,3 +4,5 @@ Rammy = BankAccount(1000, "Rammy")
 sara = BankAccount(2000, "sara")
 
 
+Rammy.getBalance()
+sara.getBalance()
