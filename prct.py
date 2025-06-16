@@ -16,3 +16,10 @@ numbers = [3,7,12,18,20,21]
 
 squared_nums = map(lambda num : num * num, numbers)
 print(list(squared_nums))
+
+###################################
+
+
+
+odd_nums = filter(lambda num : num % 2 != 0, numbers)
+print(odd_nums)
