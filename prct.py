@@ -1,3 +1,3 @@
-you = "hrllo"
+squred = lambda num : num * num 
 
-print(you)
+print(squred(2))
