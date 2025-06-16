@@ -22,4 +22,4 @@ print(list(squared_nums))
 
 
 odd_nums = filter(lambda num : num % 2 != 0, numbers)
-print(odd_nums)
+print(list(odd_nums))
