@@ -14,15 +14,15 @@ import os
 # for line  in f:
 #     print(line)
 
-# f.close()
+f.close()
 
-# try:
-#     f = open("name_list.txt")
-#     print(f.read())
-# except:
-#     print("The file you are trying to open doesnt not exist.")
-# finally:
-#     f.close()
+try:
+    f = open("name_list.txt")
+    print(f.read())
+except:
+    print("The file you are trying to open doesnt not exist.")
+finally:
+    f.close()
 
 # append - creates a file if it doesnts exist
 
