@@ -1,10 +1,10 @@
 import os 
 
 
-# r = Read
-# a = Apeeend
-# w = Write
-# x = Create
+r = Read
+a = Apeeend
+w = Write
+x = Create
 
 # f = open("names.txt")
 # # print(f.read())
