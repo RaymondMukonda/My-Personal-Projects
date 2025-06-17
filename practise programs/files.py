@@ -6,13 +6,13 @@ a = Apeeend
 w = Write
 x = Create
 
-# f = open("names.txt")
-# # print(f.read())
-# # print("")
-# # print(f.readline())
-# # print(f.readline())
-# for line  in f:
-#     print(line)
+f = open("names.txt")
+# print(f.read())
+# print("")
+# print(f.readline())
+# print(f.readline())
+for line  in f:
+    print(line)
 
 # f.close()
 
