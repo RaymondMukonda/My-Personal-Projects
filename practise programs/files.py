@@ -60,4 +60,4 @@ import os
 # if os.path.exists("dave.txt"):
 #     os.remove("dave.txt")
 # else:
-#     print("the file yoyu wish to delete")
+#     print("the file you wish to delete")
