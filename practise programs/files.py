@@ -26,18 +26,18 @@ import os
 
 # append - creates a file if it doesnts exist
 
-f = open("names.txt", "a")
-f.write("\nNdeka")
-f.close()
+# f = open("names.txt", "a")
+# f.write("\nNdeka")
+# f.close()
 
-f = open("names.txt")
-print(f.read())
-f.close()
+# f = open("names.txt")
+# print(f.read())
+# f.close()
 
-###write (overwrite) creates a new file
-f = open("context.txt", "w")
-f.write("I deleted all context")
-f.close()
+# ###write (overwrite) creates a new file
+# f = open("context.txt", "w")
+# f.write("I deleted all context")
+# f.close()
 
 
 # f = open("context.txt")
