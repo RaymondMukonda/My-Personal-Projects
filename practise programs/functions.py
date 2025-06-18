@@ -18,7 +18,7 @@
 # greet("rammy", "neo", "marry")
 
 
-# #always name you fuction args as what youd like to place there
+#always name you fuction args as what youd like to place there
 # def math_method():
 #     value_str = input("give me a number youd like to times: ")
 #     value = int(value_str)
@@ -29,7 +29,7 @@
 # math_method()
 
 #or you can do it ths way 
-# def increment(number,by):
+# def increment(number,by)
 #     return number + by
 # print(increment(number=2, by=3))
 
@@ -48,3 +48,13 @@
 # message = get_greeting("rammy") #can place it into varables
 # file = open("context.txt", "w") #open a file for writting and will place the name name rammy inside
 # file.write(message)
+
+#this chances to what you define it to be instead of taking the global value
+message = "a"
+
+def greet(name):
+    global message
+    message = f"hello {name}"
+    print(message)
+
+greet("mosh")
