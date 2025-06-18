@@ -27,3 +27,24 @@
 #     sum_reslut = num * value 
 #     print(sum_reslut)
 # math_method()
+
+#or you can do it ths way 
+# def increment(number,by):
+#     return number + by
+# print(increment(number=2, by=3))
+
+
+#1- perfrom a task / locked to printing somehing in  a terminal
+# def greet(name):
+#     print(f"hi {name}")
+# greet("rammy")
+
+
+#2- return a value / reusable 
+
+# def get_greeting(name):
+#     return f"hi {name}"
+
+# message = get_greeting("rammy") #can place it into varables
+# file = open("context.txt", "w") #open a file for writting and will place the name name rammy inside
+# file.write(message)
