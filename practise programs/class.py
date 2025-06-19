@@ -1,16 +1,16 @@
-# class Dog:
+class Dog:
 
-#     def bark(self):
-#         print("the dog is barking")
+    def bark(self):
+        print("the dog is barking")
 
-#     def add_one(self, x):
-#         return x + 1
+    def add_one(self, x):
+        return x + 1
 
-# d = Dog()
-# d.bark()
-# print(d.add_one(5))
+d = Dog()
+d.bark()
+print(d.add_one(5))
 
-###innit allows you to name the dog funtions 
+##innit allows you to name the dog funtions 
 
 class Dog:
 
