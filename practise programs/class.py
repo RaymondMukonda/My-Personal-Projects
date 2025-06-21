@@ -108,8 +108,15 @@ class Pet:
         print("i dont know how to speak")
 
 class Cat(Pet):
+    def __init__(self, name, age, color):
+        super().__init__(name, age)
+        self.color = color
+
     def speak(self):
         print("moew")
+
+    def show(self):
+        print(f"i am {self.name} and i am {self.age} years old and im {self.color}" )
 
 class Dog(Pet):
     def speak(self):
@@ -128,8 +135,8 @@ class Fish(Pet):
 #if the inhrent method is the same in the upper level and lower the program will overide and takes whats local meaning whats
 
 # here is another example of how it works will name a funtion but not define it and let it inherent the speak method
-f = Fish("jerry", 34)
-f.speak()
+# f = Fish("jerry", 34)
+# f.speak()
 #the output will be i dont know how to speak
 
 
@@ -141,3 +148,7 @@ f.speak()
 # # if you call whats within the dog and cat funtion youll get :
 # d.speak()
 # c.speak()
+
+#super referreces the parent class Pet / super stands for the class we inheri from
+c = Cat("molly", 56, "brown")
+c.show()
