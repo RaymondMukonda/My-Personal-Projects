@@ -104,6 +104,9 @@ class Pet:
     def show(self):
         print(f"i ma {self.name} and i am {self.age} years old")
 
+    def speak(self):
+        print("i dont know how to speak")
+
 class Cat(Pet):
     def speak(self):
         print("moew")
@@ -115,6 +118,11 @@ class Dog(Pet):
 #assign it then call it
 p = Pet("timmy", 17)
 p.show()
+p.speak()
+print("")
+#the p was assign to pet so in other words the p is a child of pet and will inheret everything thats in the when called 
+#p.speak will be diffrent bec the others are using thier own local speak rather then inhereint from the Pet.
+#if the inhrent method is the same in the upper level and lower the program will overide and takes whats local meaning whats under
 c = Cat("billy", 12)
 c.show()
 d = Dog("merry", 23)
