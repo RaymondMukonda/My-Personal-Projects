@@ -122,7 +122,7 @@ p.speak()
 print("")
 #the p was assign to pet so in other words the p is a child of pet and will inheret everything thats in the when called 
 #p.speak will be diffrent bec the others are using thier own local speak rather then inhereint from the Pet.
-#if the inhrent method is the same in the upper level and lower the program will overide and takes whats local meaning whats under
+#if the inhrent method is the same in the upper level and lower the program will overide and takes whats local meaning whats
 c = Cat("billy", 12)
 c.show()
 d = Dog("merry", 23)
