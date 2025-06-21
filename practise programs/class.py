@@ -1,88 +1,93 @@
+# # # class Dog:
+
+# # #     def bark(self):
+# # #         print("the dog is barking")
+
+# # #     def add_one(self, x):
+# # #         return x + 1
+
+# # # d = Dog()
+# # # d.bark()
+# # # print(d.add_one(5))
+
+# # ##innit allows you to name the dog funtions 
+
 # # class Dog:
 
-# #     def bark(self):
-# #         print("the dog is barking")
+# #     def __init__(self, name, age):
+# #         self.name = name
+# #         self.age = age
+# #         # print(name)
 
-# #     def add_one(self, x):
-# #         return x + 1
+# #     #anoher way to print what vaule is givven 02
+# #     def get_name(self):
+# #         return self.name
+    
+# #     def get_age(self):
+# #         return self.age
+    
+# #     #this allows you to modfie a funtion that has already been set
+# #     def set_age(self, age):
+# #         self.age = age
+    
+# # this is calling the the fuction to print on its own without print
+# # d = Dog("tom")
+# # d2 = Dog("molly")
+# # print("")
+# # #this will get what ever name is stored within the assgined d or d2 arguments
+# # print(d.get_name())
+# # print(d2.get_name()) #after printing the output should be the same.
+# # #print out the name stored in just like above 
+# # print(d.name)
+# # print(d2.name)
+# #pass in the two arguments specified in the dog class otherwise an error will occur
+# # d = Dog("timmy", 34)
+# # print(d.get_age())
+# #this fuction gets modified by taking the previous func and rebranding it.
+# # d = Dog("tim", 34)
+# # d.set_age(23)
+# # print(d.get_age())
 
-# # d = Dog()
-# # d.bark()
-# # print(d.add_one(5))
 
-# ##innit allows you to name the dog funtions 
+# # more complex class
 
-# class Dog:
-
-#     def __init__(self, name, age):
+# class Student:
+#     def __init__(self, name, age, grade):
 #         self.name = name
-#         self.age = age
-#         # print(name)
+#         self.age = age 
+#         self.grade = grade # 0 - 100 
 
-#     #anoher way to print what vaule is givven 02
-#     def get_name(self):
-#         return self.name
+#     def get_grade(self):
+#         return self.grade
     
-#     def get_age(self):
-#         return self.age
+# class Course:
+#     def __init__(self, name, max_students):
+#         self.name = name 
+#         self.max_students = max_students
+#         self.students = []
+
+#     def add_student(self, student):
+#         if len(self.students) < self.max_students:
+#             self.students.append(student)
+#             return True
+#         return False
     
-#     #this allows you to modfie a funtion that has already been set
-#     def set_age(self, age):
-#         self.age = age
-    
-# this is calling the the fuction to print on its own without print
-# d = Dog("tom")
-# d2 = Dog("molly")
-# print("")
-# #this will get what ever name is stored within the assgined d or d2 arguments
-# print(d.get_name())
-# print(d2.get_name()) #after printing the output should be the same.
-# #print out the name stored in just like above 
-# print(d.name)
-# print(d2.name)
-#pass in the two arguments specified in the dog class otherwise an error will occur
-# d = Dog("timmy", 34)
-# print(d.get_age())
-#this fuction gets modified by taking the previous func and rebranding it.
-# d = Dog("tim", 34)
-# d.set_age(23)
-# print(d.get_age())
+#     def get_average_grade(self):
+#         value = 0
+#         for student in self.students:
+#             value += student.get_grade()
 
+#         return value / len(self.students)
 
-# more complex class
+# s1 = Student("rammy", 19, 95)
+# s2 = Student("tommy", 21, 75)
+# s3 = Student("johnny", 19, 65)
 
-class Student:
-    def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age 
-        self.grade = grade # 0 - 100 
-
-    def get_grade(self):
-        return self.grade
-    
-class Course:
-    def __init__(self, name, max_students):
-        self.name = name 
-        self.max_students = max_students
-        self.students = []
-
-    def add_student(self, student):
-        if len(self.students) < self.max_students:
-            self.students.append(student)
-            return True
-        return False
-    
-    def get_average_grade(self):
-        value = 0
-        for student in self.students:
-            value += student.get_grade
-
-s1 = Student("rammy", 19, 95)
-s2 = Student("tommy", 21, 75)
-s3 = Student("johnny", 19, 65)
-
-course = Course("Science", 2)
-course.add_student(s1)
-course.add_student(s2)
-
-print(course.students[0].name)
+# course = Course("Science", 2)
+# course.add_student(s1)
+# course.add_student(s2)
+# print(course.get_average_grade())
+# #this will print false and grade ave will remain same
+# print(course.add_student(s3))
+# print(course.get_average_grade())
+# # print(course.students[0].name)
