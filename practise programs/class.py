@@ -44,6 +44,6 @@ class Dog:
 # d = Dog("timmy", 34)
 # print(d.get_age())
 #this fuction gets modified by taking the previous func and rebranding it.
-d = Dog("tim", 34)
-d.set_age(23)
-print(d.get_age())
+# d = Dog("tim", 34)
+# d.set_age(23)
+# print(d.get_age())
