@@ -91,3 +91,35 @@
 # print(course.add_student(s3))
 # print(course.get_average_grade())
 # # print(course.students[0].name)
+
+
+####### inheritence###### place the funtion within the class agruments 
+
+
+class Pet:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def show(self):
+        print(f"i ma {self.name} and i am {self.age} years old")
+
+class Cat(Pet):
+    def speak(self):
+        print("moew")
+
+class Dog(Pet):
+    def speak(self):
+        print("barrk")
+
+#assign it then call it
+p = Pet("timmy", 17)
+p.show()
+c = Cat("billy", 12)
+c.show()
+d = Dog("merry", 23)
+d.show()
+print("")
+# if you call whats within the dog and cat funtion youll get :
+d.speak()
+c.speak()
