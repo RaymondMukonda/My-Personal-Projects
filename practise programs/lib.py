@@ -4,5 +4,8 @@ def add(x, y):
 def sub(x, y):
     return x - y 
 
-def hell0():
+def hello():
     print("hello")
+
+if __name__ == "__main__":
+    print("runing main")
