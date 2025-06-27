@@ -69,3 +69,9 @@ print("")
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10]
 splist = list1[1:5] # index see is 5 but this fuction means = to but not including 5, meaning to index 6 as 5 youd need to add till 6
 print(splist)
+# and if you do not specify for the bieginning it will tae evrythig before and print till the end and 
+#vise vsera if you only specify the beinging 
+splist = list1[:5]
+print(splist)
+splist = list1[0:]
+print(splist)
