@@ -43,3 +43,14 @@ print(mylist) #youll  see tht lemon is out the list
 
 # you can also remove a specific element
 items = mylist.remove("blueberry")
+print(mylist) #youll see that blueberry goes out the list
+print("")
+# this removes evry thng from the list
+# items = mylist.clear()  comment in out so that thr list isnt emepty
+# print(mylist)
+items = mylist.reverse()
+print(mylist)
+
+# this will sort your numbers alferbeti
+items = mylist.sort()
+print(mylist)
