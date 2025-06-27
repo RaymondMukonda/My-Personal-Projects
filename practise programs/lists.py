@@ -64,3 +64,8 @@ newlist2 = [1, 2, 3, 4, 5]
 newwest = newlist + newlist2
 print(newwest)
 print("")
+
+#to get a specofic range of numbers:
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10]
+splist = list1[1:5] # index see is 5 but this fuction means = to but not including 5, meaning to index 6 as 5 youd need to add till 6
+print(splist)
