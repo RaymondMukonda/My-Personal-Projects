@@ -54,3 +54,13 @@ print(mylist)
 # this will sort your numbers alferbeti
 items = mylist.sort()
 print(mylist)
+print("")
+
+# to print the same thing in a list a number of times
+newlist = [0] * 5
+print(newlist) 
+# to add to list together you can
+newlist2 = [1, 2, 3, 4, 5]
+newwest = newlist + newlist2
+print(newwest)
+print("")
