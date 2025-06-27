@@ -27,3 +27,19 @@ print("")
 
 # print how many items in in a list
 print(len(mylist))
+
+# to add items into the list you use bracts 
+mylist.append("lemon")
+print(mylist)
+# if you want to place an item at a specific place /  index(we use the inssert method)
+# add the indx first then thr item
+mylist.insert(1, "blueberry")
+print(mylist)
+print("")
+# the pop item removes the last item
+items = mylist.pop()
+print(items)
+print(mylist) #youll  see tht lemon is out the list
+
+# you can also remove a specific element
+items = mylist.remove("blueberry")
