@@ -36,3 +36,19 @@ try:
     print(mydict["lastname"])
 except:
     print("That value does not exist in my dict")
+
+#this is how you can copy a dictionary otherwise youll end up chaing both
+print("")
+diction = {"name": "bobby", "age": "34"}
+diction_cpy = diction 
+diction_cpy["email"] = "booy@yb.com"
+print(diction_cpy)
+print(diction)
+print("")
+#once yove done this youll realize that it changes both dictionaries to fic that use the .copy() method
+diction1 = {"name": "bobby", "age": "34"}
+diction1_cpy = diction1.copy()
+diction1_cpy["email"] = "booy@yb.com"
+print(diction1_cpy)
+print(diction1)
+#see the difference
