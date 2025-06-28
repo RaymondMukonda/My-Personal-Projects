@@ -46,9 +46,17 @@ print(diction_cpy)
 print(diction)
 print("")
 #once yove done this youll realize that it changes both dictionaries to fic that use the .copy() method
-diction1 = {"name": "bobby", "age": "34"}
+diction1 = {"name": "mbulo", "age": "22"}
 diction1_cpy = diction1.copy()
 diction1_cpy["email"] = "booy@yb.com"
 print(diction1_cpy)
 print(diction1)
 #see the difference
+print("")
+print("")
+print("")
+x = len(mydict)
+if x > 7:
+    print("oaky")
+else:
+    print("small")
