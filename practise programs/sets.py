@@ -32,3 +32,7 @@ setB = {1, 2, 3, 10, 11, 12}
 
 diff = setA.difference(setB) #you can place set be where a is to also check where the diffrence is 
 print(diff) #will print out the difference 
+#this dottom code will check and print what they have in diffrence as in what both have that are diffrent from 
+#each other
+diff = setA.symmetric_difference(setB)
+print(diff)
