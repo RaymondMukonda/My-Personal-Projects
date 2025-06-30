@@ -11,20 +11,7 @@
     </p>
 
     <button onclick="
-    const computerMove = pickComputerMove();
-
-    let result = '';
-
-    if (computerMove === 'rock') {
-        result = 'Tie.';
-    } else if (computerMove === 'paper') {
-        result = 'You lose!';
-    } else if (computerMove === 'scissors') {
-        result = 'You win!';
-    }
-
-    alert(`You picked Rock .Computer picked ${computerMove}.${result}`);
-
+        playGame('Rock');
     ">Rock</button>
 
     <button onclick="
@@ -66,7 +53,6 @@
                 } else if (computerMove === 'scissors') {
                     result = 'Tie';
                 }
-
             } else if (playerMove === 'Paper') {
                 if (computerMove === 'rock') {
                     result = 'You win!';
@@ -75,7 +61,15 @@
                 } else if (computerMove === 'scissors') {
                     result = 'You lose.';
                 }
-            
+            } else if (playerMove === 'Rock') {
+                if (computerMove === 'Rock') {
+                    result = 'Tie.';
+                } else if (computerMove === 'paper') {
+                    result = 'You lose!';
+                } else if (computerMove === 'scissors') {
+                    result = 'You win!';
+                }
+            }
             alert(`You picked ${playerMove} .Computer picked ${computerMove}.${result}`);
         }
     </script>
