@@ -45,3 +45,9 @@ print("")
 var = 3.1234567
 my_string5 = "the varibale is {:.2f}".format(var)#so you call what you want to formate and python places the value into the open brackets. .2f specifys how many decimal points pyton should go to.
 print(my_string5)# see output in terminal
+#adding more values as we did with the other code
+var = 3.1234567
+var2 = 6
+my_string6 = "the varibale is {:.2f} and {}".format(var, var2)
+print(my_string6)
+print("")
