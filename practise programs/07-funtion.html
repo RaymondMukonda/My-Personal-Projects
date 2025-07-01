@@ -14,24 +14,22 @@
          };
 
 
-         if (result === 'You win!') {
-            socre.Wins = score.wins += 1;
-         } else if (result === 'You lose!') {
-            score.Losses += 1;
-         } else if (result === 'Tie') {
-            scores.Ties += 1;
-         }
-
+      
         const product = {
             name: 'socks',
-            price: 1090
+            rating: {
+                stars: 4.5,
+                count: 87
+            }
         };
 
         console.log(product.name);
-        console.log(product.price);
-        
-        product.name = 'cotton socks';
-        console.log(product);
+        console.log(product.name);
+        console.log(product['name']);
+        console.log(product.rating.count);
+
+
+
     </script>
 </body>
 </html>
