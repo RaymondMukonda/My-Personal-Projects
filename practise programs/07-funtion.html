@@ -7,33 +7,63 @@
 </head>
 <body>
     <script>
-         const score = {
-            Wins: 0,
-            Losses: 0,
-            Ties: 0
-         };
+        //  const score = {
+        //     Wins: 0,
+        //     Losses: 0,
+        //     Ties: 0
+        //  };
 
 
       
-        const product = {
-            name: 'socks',
-            rating: {
-                stars: 4.5,
-                count: 87
-            },
-            fun: function function1 () {
-                console.log('function inside an object')
-            }
+        // const product = {
+        //     name: 'socks',
+        //     rating: {
+        //         stars: 4.5,
+        //         count: 87
+        //     },
+        //     fun: function function1 () {
+        //         console.log('function inside an object')
+        //     }
+        // };
+
+        // console.log(product.name);
+        // console.log(product.name);
+        // console.log(product['name']);
+        // console.log(product.rating.count);
+
+        // product.fun();
+
+        // console.log((JSON.stringify(product))); -->
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+
+        const object1 = {
+            messahe: 'hello'
+        };
+        const object2 = object1;
+        object1.messahe = 'Good Job!';
+
+        console.log(object1);
+        console.log(object2);
+        console.log(object1.messahe === object2.messahe);
+
+        const object4 = {
+            message: 'Good Job',
+            price: 799
         };
 
-        console.log(product.name);
-        console.log(product.name);
-        console.log(product['name']);
-        console.log(product.rating.count);
+        // const message = object4.message; this code does the same thing as below
+        const { message, price} = object4;  //this texts does the same thing as above just shorter
+        console.log(message);
+        console.log(price); //this is hw you can fetch the variable
 
-        product.fun();
-
-        console.log((JSON.stringify(product)));
+        const object5 = {
+            //message:  message        this code does the same as below
+            message
+        };
+        console.log(object5);
 
     </script>
 </body>
