@@ -9,14 +9,18 @@
  <body>
     <button>Hello</button>
     <script>
-        console.log(document.ttle);
-        document.title = 'Changed';
+        document.querySelector('button');
+        console.log(document.querySelector('button').innerHTML); //without the .inner html this code will will disply the button elemnt and text , but by adding .inner it only prints out the the text stored witin
+    //below you will be able to change the text that is stored within the button
+        document.querySelector('button').innerHTML = 'Changed';
+    //     console.log(document.ttle);
+    //     document.title = 'Changed';
 
-        console.log(document.body);
-        console.log(typeof document.body);
+    //     console.log(document.body);
+    //     console.log(typeof document.body);
 
-        console.log(document.body.innerHTML);
-        document.body.innerHTML = '<button>New button</button>';
+    //     console.log(document.body.innerHTML);
+    //     document.body.innerHTML = '<button>New button</button>';
     </script>
  </body>
  </html>
