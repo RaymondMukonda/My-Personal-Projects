@@ -8,19 +8,30 @@
  </head>
  <body>
     <button>Hello</button>
+    <button class="js-button">Second Button</button>
     <script>
         document.querySelector('button');
         console.log(document.querySelector('button').innerHTML); //without the .inner html this code will will disply the button elemnt and text , but by adding .inner it only prints out the the text stored witin
-    //below you will be able to change the text that is stored within the button
+        //below you will be able to change the text that is stored within the button
         document.querySelector('button').innerHTML = 'Changed';
-    //     console.log(document.ttle);
-    //     document.title = 'Changed';
 
-    //     console.log(document.body);
-    //     console.log(typeof document.body);
+        console.log(document.querySelector('.js-button')); //you can get any specific elemnt or text into our javascript with this
 
-    //     console.log(document.body.innerHTML);
-    //     document.body.innerHTML = '<button>New button</button>';
+        // you can turn it into a variable as show below
+        const buttonElemnt = document.querySelector('.js-button');
+        // then call it 
+        console.log(buttonElemnt);
+        // this code does the same thing as the one above it.
+
+        console.log(document.ttle);
+        document.title = 'Changed';
+
+        console.log(document.body);
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>New button</button>';
+
     </script>
  </body>
  </html>
