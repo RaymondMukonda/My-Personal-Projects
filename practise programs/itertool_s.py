@@ -17,3 +17,6 @@ from itertools import permutations
 f = [1, 2, 3]
 perm = permutations(f)
 print(list(perm))
+# you can specify the paramiters as so
+perm = permutations(f, 2)
+print(list(perm)) # this will limit it to two
