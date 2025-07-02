@@ -13,3 +13,9 @@ Point = namedtuple("Point", "x,y")
 pt = Point(1, -4)
 print(pt) # this will print everything together you can fect the two var individually
 print(pt.x, pt.y) #see diffrence in output
+print(type(pt))
+
+
+from collections import OrderedDict
+# this is the same as an ordinerey dict only diffrenece is this one rembers 
+# the order the item was inserted. but ts now nuneccry bec new pthon dict can do them same 
