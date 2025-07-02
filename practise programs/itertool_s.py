@@ -57,3 +57,21 @@ i = [1, 2, 3, 4]
 group_obj = groupby(i, key=smaller_than_3)
 for key, value in group_obj:
     print(key, list(value)) # the output will be grouped on what is true and what is false. this mthod helps us group catagoriess that are of the same.
+
+
+from itertools import count, cycle, repeat # infinite iterators
+
+for i in count(10): # this will start at ten
+    print(i)
+    if i == 15: # this will make it stop at 15 / if not told it will run forever
+        break
+
+o = [1, 2, 3] # thhis will print 1 2 n 3 coninoiusly until told not to
+for i in cycle(o):
+    print(i)
+    if i == 3:
+        break
+
+print("")
+for i in repeat(1, 4):#placing a 4 there means it should only print 1 four times
+    print(i)
