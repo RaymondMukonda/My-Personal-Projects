@@ -40,4 +40,23 @@ print("")
 from collections import deque
 # its a double ended que that removes characters from both ends / front and
 # 3 back
-
+d = deque()
+d.append(1)
+d.append(2)
+print(d)
+d.appendleft(3) # will add elements to the left side
+print(d)
+# usaully when we use pop it removes from the right/ end part
+# with this will be able to remove on the left side / start side
+d.popleft() # this will remove the 3 
+d.pop() # this will remove at the end / right
+print(d) # this will print 1 because we removd from both ends 
+# add elemnts to the right side 
+d.extend([2, 3, 4, 5]) # you can also do this on the left with .extendleft
+print(d)
+# you can als rotate nubers to the right or left 
+d.rotate(1) # this will rotate numbers 1 place to the right meaning to make 1 go all the way to where 5 is you,d put vaule 5 in the bracket
+print(d)
+# this is how to rotate the other way round
+d.rotate(-2)
+print(d) # you,'ll see that 1 goes all the way to the back bec of the 2
