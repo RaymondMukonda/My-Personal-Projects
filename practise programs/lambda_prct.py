@@ -1,25 +1,21 @@
-def funcBuilder(x):
-    return lambda num: num + x
+#Lambda: These functions are small, single-expression functions that can be defined inline without a formal def statement. Lambda functions are often used for short, simple operations where defining a full function would be cumbersome or unnecessar.
 
-addten = funcBuilder(10)
-addTwenty = funcBuilder(20)
+# in short lambda allows you to make one line functions
 
-print(addten(7))
-print(addTwenty(7))
+add10 = lambda x: x + 10
+print(add10(5))
+# the code above is the same as the function below
+def add10_func(x):
+    return x + 10
+print(add10(5)) # print and see same output.
+print("")
+# another exemple this will take ywo arguments and times them 
+mult = lambda x,y: x * y
+print(mult(5,5))
 
-
-##################################
-
-
-
-numbers = [3,7,12,18,20,21]
-
-squared_nums = map(lambda num : num * num, numbers)
-print(list(squared_nums))
-
-###################################
-
-
-
-odd_nums = filter(lambda num : num % 2 != 0, numbers)
-print(list(odd_nums))
+# here eis another way
+points2d = [(1, 2), (15, 1), (5, -1), (10, 4)]
+points2d_sorted = sorted(points2d, key=lambda x: x[1])
+# this will sort the list according to the y values ( index 1 )
+print(points2d)
+print(points2d_sorted)
