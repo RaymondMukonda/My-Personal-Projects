@@ -19,3 +19,9 @@ points2d_sorted = sorted(points2d, key=lambda x: x[1])
 # this will sort the list according to the y values ( index 1 )
 print(points2d)
 print(points2d_sorted)
+# that code is the same as 
+def sort_by_y(x):
+   return x[1] # then call it in the code
+
+points2d_sorted = sorted(points2d, key=sort_by_y)
+print(points2d_sorted) # the output should be the same 
