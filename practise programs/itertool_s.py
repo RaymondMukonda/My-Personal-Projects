@@ -20,3 +20,40 @@ print(list(perm))
 # you can specify the paramiters as so
 perm = permutations(f, 2)
 print(list(perm)) # this will limit it to two
+print("")
+
+
+from itertools import combinations,  combinations_with_replacement
+# will make all possible combinations possibe /
+# rember you cant  have combinations of the same argument[ 1, 2, 3, ]
+# if you want that then you'd have to do this add , combinations_with_replacement
+g = [1, 2, 3, 4]
+comb = combinations(g, 2) # to see all numbers dont add a specification just (g)
+print(list(comb))
+comb_wr = combinations_with_replacement(g, 2)
+print(list(comb_wr)) # see diffrence in the terminal
+print("")
+
+from itertools import accumulate
+import operator
+# it will add left to right 1 + 2 = 3 +  3 = 6 + 4 = 10
+h = [1, 2, 3, 4]
+acc = accumulate(h)
+print(h)
+print(list(acc)) # see output on terminal
+# you can also multiply by adding aperator
+acc2 = accumulate(h, func=operator.mul)
+print("")
+print(h)
+print(list(acc2)) # 1 times 1 = 1 times 2 = 2 etc
+print("")
+
+from itertools import groupby
+
+def smaller_than_3(x):
+    return x < 3
+
+i = [1, 2, 3, 4]
+group_obj = groupby(i, key=smaller_than_3)
+for key, value in group_obj:
+    print(key, list(value)) # the output will be grouped on what is true and what is false. this mthod helps us group catagoriess that are of the same.
