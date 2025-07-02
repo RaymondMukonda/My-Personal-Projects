@@ -25,3 +25,9 @@ def sort_by_y(x):
 
 points2d_sorted = sorted(points2d, key=sort_by_y)
 print(points2d_sorted) # the output should be the same 
+print("")
+
+# map fuction
+a = [1, 2, 3, 4, 5]
+b = map(lambda x: x*2, a) # map = to b == a plus its function which is times
+print(list(b))
