@@ -11,6 +11,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .is-subscribed {
@@ -18,3 +19,25 @@ body {
     color: black;
 }
 
+.calculator {
+    background-color: rgb(4, 151, 4);
+    font-size: 15px;
+    color: white;
+    padding: 11px 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.cost-input {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.move-icon {
+    height: 50px;
+}
