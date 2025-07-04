@@ -1,3 +1,7 @@
+body {
+    font-family: Arial;
+}
+
 .Subscribe-button {
     border: none;
     color: white;
@@ -13,3 +17,4 @@
     background-color: rgb(214, 213, 213);
     color: black;
 }
+
