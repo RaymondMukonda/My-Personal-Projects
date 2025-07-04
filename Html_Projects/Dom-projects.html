@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/Dom-project.css">
+
 </head>
 <body>
     <p>
@@ -11,13 +13,13 @@
     </p>
     <button onclick="
         Subscribe();
-    " class="js-subscribe-button">Subscribe</button>
+    " class="js-subscribe-button Subscribe-button">Subscribe</button>
 
     <p>Amazon Shipping Calculator</p>
 
     <input placeholder="Cost of order" class="js-cost-input" onkeydown="
     handleCostKeydown(event);
-    console.log(event.key); //in the consloe it will show me everything you type
+    console.log(event.key); //in the consloe it will show me everything you type / not needed but good to see what ppl have typed.
     ">
 
     <button onclick="
@@ -28,6 +30,8 @@
 
 
     <script>
+        String(25)
+
         function handleCostKeydown(event) {
             if (event.key === 'Enter') {
             calculateTotal();
@@ -50,6 +54,7 @@
 
             if (buttonElement.innerText === 'Subscribe') {
                 buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subscribed');
             } else {
                 buttonElement.innerHTML = 'Subscribe';
             }
