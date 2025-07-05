@@ -1,5 +1,5 @@
 
-x = 2
+x = 2  #change this to strng to see output 
 
 try:
     # print(x/1)
@@ -16,4 +16,32 @@ else:
 
 finally: #the finally will always print 
     print("I'm going to print with or without an errors.")
+
+## anotehr example 
+try:
+    a = 5 / 0
+    b = a + 4 
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e)
+else:
+    print("everything is fine")
+finally:
+    print("cleaning up....")
+
+print("")
  
+
+# how you can define your own exception errors 
+class ValueTooHighError(Exception):
+    pass
+
+def test_value(x):
+    if x > 100:
+        raise ValueTooHighError("This value is to high")
+    
+try:
+    test_value(200)
+except ValueTooHighError as e:
+    print(e)
