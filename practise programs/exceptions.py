@@ -14,6 +14,6 @@ except Exception as error:
 else:
     print("No errors!")
 
-finally:
+finally: #the finally will always print 
     print("I'm going to print with or without an errors.")
  
