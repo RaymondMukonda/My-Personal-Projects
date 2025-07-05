@@ -1,5 +1,6 @@
 
 x = 2
+
 try:
     # print(x/1)
     if not type(x) is str:
@@ -15,3 +16,4 @@ else:
 
 finally:
     print("I'm going to print with or without an errors.")
+ 
