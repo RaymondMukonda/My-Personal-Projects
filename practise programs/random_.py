@@ -16,3 +16,14 @@ print(c)
 d = random.randrange(1, 10)
 print(d)
 print("")
+
+mylist = list("ABCDEFGH")
+e = random.choice(mylist) #choice lets it pick from whatever you give it
+print(e)
+
+# this code will not pick the same key twice 
+e = random.sample(mylist, 3)# well add for it to pick 3 keys so you see
+print(e)
+# but lets say you want to pick the same item more then once at the same time
+e = random.choices(mylist, k = 3)
+print(e) # you see it picks the same key twice
