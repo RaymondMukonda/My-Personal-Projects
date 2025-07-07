@@ -27,3 +27,7 @@ print(e)
 # but lets say you want to pick the same item more then once at the same time
 e = random.choices(mylist, k = 3)
 print(e) # you see it picks the same key twice
+
+#this will shuffle the list
+random.shuffle(mylist)
+print(mylist)
