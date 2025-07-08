@@ -92,8 +92,10 @@ def repeat(num_times):
     return decorator_repeat
 
 
-@repeat(num_times=3)
+@repeat(num_times=3) # place how many times you want it to display or exsicute
 def greet(name):
     print(f"Hello {name}")
 
 greet("Rammy")
+
+# this code is how you use decoratetors with arguments seen above 
