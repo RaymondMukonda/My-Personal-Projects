@@ -139,10 +139,23 @@ say_hello("Rammy")
 
 ##############################################################################
 # You ca also use this with classes
+print("")
+class CountCalls:
+
+    def __init__(self, func):
+        self.func = func
+        self.num_calls = 0 
 
 
+    def __call__(self, *args, **kwargs):
+        self.num_calls += 1
+        print(f"This is exercuted {self.num_calls} times")
+        return self.func(*args, **kwargs)
 
 
 @CountCalls
 def say_name_counts():
     print("Hello")
+
+say_name_counts() # every time you call the func it will tell you # 1
+say_name_counts() # see out put below # 2
