@@ -19,5 +19,13 @@ print(value)
 value = next(g)
 print(value)
 
-value = next(g)
-print(value) # but once you run it for the forth timre it will break at fourth ( stop itteration)
+# value = next(g)
+# print(value) # but once you run it for the forth timre it will break at fourth ( stop itteration)
+
+def countdown(num):
+    print("Staring")
+    while num > 0:
+        yield num
+        num -= 1
+
+cd = countdown(4)
