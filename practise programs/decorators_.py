@@ -139,3 +139,10 @@ say_hello("Rammy")
 
 ##############################################################################
 # You ca also use this with classes
+
+
+
+
+@CountCalls
+def say_name_counts():
+    print("Hello")
