@@ -42,6 +42,8 @@ print("")
 # Genarators are very memory efficient, for when you work with large data
 ##########################################################################
 
+import sys
+
 def firstn(n):
     nums = []
     num = 0
@@ -59,3 +61,7 @@ def firstn_generator(n):
 print(firstn(10))
 print(sum(firstn(10))) # will print the total sum together
 print(sum(firstn_generator(10))) # this will do the same as above code
+
+# this will show you which takes up more memory
+print(sys.getsizeof(firstn(1000000)))
+print(sys.getsizeof(firstn_generator(1000000)))
