@@ -134,3 +134,8 @@ def say_hello(name): # 4
     return greeting
 
 say_hello("Rammy")
+
+# this code above helps to show you what runs first and calls the name so you siee what gets done before what 
+
+##############################################################################
+# You ca also use this with classes
