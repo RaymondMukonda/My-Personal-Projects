@@ -43,4 +43,12 @@ print("")
 ##########################################################################
 
 def firstn(n):
-    
+    nums = []
+    num = 0
+    while num < n:
+        nums.append(num)
+        num += 1 
+    return nums
+
+print(firstn(10))
+print(sum(firstn(10))) # will print the total sum together
