@@ -97,5 +97,40 @@ def greet(name):
     print(f"Hello {name}")
 
 greet("Rammy")
-
+print("")
 # this code is how you use decoratetors with arguments seen above 
+
+# you can also next decorators on how you place them on tom of each other aas seen below
+
+def start_end_decorator(func):
+
+    def wrapper(*args, **kwargs):
+        print("start")
+        result = func(*args, **kwargs)
+        print("end")
+        return result
+    return wrapper
+
+def debug(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        args_repr = [repr(a) for a in args]
+        kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]
+        signature = ",".join(args_repr + kwargs_repr)
+        print(f"Calling {func.__name__}({signature})") #prnt info abut name func
+        result = func(*args, **kwargs) # exercute
+        print(f"{func.__name__!r} returened {result!r}") #prnt info bout return
+        return result
+    return wrapper
+
+
+# will be exercuted in order placed (listed)
+
+@debug # 1  # 2 will be calling inside of debug # 6 will print wrapper return
+@start_end_decorator # 3 # 5 will will print the end 
+def say_hello(name): # 4
+    greeting = f"hello {name}"
+    print(greeting)
+    return greeting
+
+say_hello("Rammy")
