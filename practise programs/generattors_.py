@@ -18,7 +18,7 @@ print(value)
 
 value = next(g)
 print(value)
-
+print("")
 # value = next(g)
 # print(value) # but once you run it for the forth timre it will break at fourth ( stop itteration)
 
@@ -28,4 +28,14 @@ def countdown(num):
         yield num
         num -= 1
 
-cd = countdown(4)
+cd = countdown(4) # this wont run bec of the code
+value = next(cd) # it will start but stop bec of cd value 4 
+print(next(cd)) # this will make it continue from where it stopped but minus from 4 to 3 then stop again 
+
+# print(cd) # out put should be 3
+# run the code till nothing is left
+print(next(cd)) # it will rember its last value
+print(next(cd))
+print(next(cd)) # this will blow up ( stop iteraton)
+
+
