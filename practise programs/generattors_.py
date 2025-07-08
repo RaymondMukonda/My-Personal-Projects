@@ -36,6 +36,11 @@ print(next(cd)) # this will make it continue from where it stopped but minus fro
 # run the code till nothing is left
 print(next(cd)) # it will rember its last value
 print(next(cd))
-print(next(cd)) # this will blow up ( stop iteraton)
+# print(next(cd)) # this will blow up ( stop iteraton)
+print("")
 
+# Genarators are very memory efficient, for when you work with large data
+##########################################################################
 
+def firstn(n):
+    
