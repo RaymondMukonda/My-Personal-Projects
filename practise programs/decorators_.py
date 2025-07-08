@@ -64,3 +64,14 @@ def add_5(x):
 result = add_5(10)
 print(result)
 
+#################################################################
+# sum up of decorator function
+
+def start_end_decorator(func):
+
+    def wrapper(*args, **kwargs):
+        print("start")  # you can do somehting before the function 
+        result = func(*args, **kwargs) # then is will run the fuction
+        print("end") # then it will do something after the fuction
+        return result
+    return wrapper
