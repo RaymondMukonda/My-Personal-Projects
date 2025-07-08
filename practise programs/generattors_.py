@@ -50,5 +50,12 @@ def firstn(n):
         num += 1 
     return nums
 
+def firstn_generator(n):
+    num = 0
+    while num < n:
+        yield num
+        num += 1 
+
 print(firstn(10))
 print(sum(firstn(10))) # will print the total sum together
+print(sum(firstn_generator(10))) # this will do the same as above code
