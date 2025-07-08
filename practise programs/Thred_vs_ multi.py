@@ -9,7 +9,7 @@
 #  + Processes are interruptable/ killable 
 #  + One GIL for each process -> avids GIL limitation
 
-#  -  Heavyweight
+#  -  Heavyweight takes more memory
 #  - Starting a proceess is slower then starting a thread 
 #  - More memory 
 #  - IPC  ( inter-process communication) is more comaplicated 
@@ -25,7 +25,7 @@
 #  - Thread is limited to GIL: Only one thread at a time 
 #  - No effects for CPU-bound tasks 
 #  - Not interruptable/ killable
-#  - Careful with race conditions 
+#  - Careful with race conditions ( two or more threads want to modify a varible at the same time , can cuase crashes)
 
 # Gil: Global interpreter lock 
 
@@ -37,4 +37,57 @@
 #  - Use a different,  free-threaded Pyhton implementation (Jython, IronPython)
 #  - Use Python as a wrapper for third-party libraries (C/C++) -> numpy, scipy
 
- 
+from multiprocessing import Process
+import os
+import time
+
+def square_numbers():
+    for i in range(100):
+        i * i
+        time.sleep(0.1)
+
+Processes = []
+num_processes = os.cpu_count()
+
+# create process
+for i in range(num_processes):
+    p = Process(target=square_numbers)
+    Processes.append(p)
+
+# start
+for p in Processes:
+    p.start()
+
+# join 
+for p in Processes:
+    p.join()
+
+print("end main")
+
+################################################################################
+from threading import Thread
+import os
+import time
+
+def square_numbers():
+    for i in range(100):
+        i * i
+        time.sleep(0.1)
+
+threads = []
+num_threads = 10
+
+# create process
+for i in range(num_threads):
+    t = Thread(target=square_numbers)
+    threads.append(t)
+
+# start
+for t in threads:
+    t.start()
+
+# join
+for t in threads:
+    t.join()
+
+print("end main t")
