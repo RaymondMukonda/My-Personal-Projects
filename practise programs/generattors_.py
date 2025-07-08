@@ -65,3 +65,4 @@ print(sum(firstn_generator(10))) # this will do the same as above code
 # this will show you which takes up more memory
 print(sys.getsizeof(firstn(1000000)))
 print(sys.getsizeof(firstn_generator(1000000)))
+print("")
