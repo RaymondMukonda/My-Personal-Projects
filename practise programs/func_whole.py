@@ -98,3 +98,17 @@ def lists(a_list):
 my_list5 = [1, 2, 3]
 lists(my_list5)
 print(my_list5)
+
+################## Asterisk Operator ###################################
+print("")
+numbers = [1, 2, 3, 4, 5, 6]
+
+*beginning, last = numbers #this will unpack into a list
+print(beginning)
+print(last) # this will be the key value for 6 last=6
+
+# of you can d it the other way round
+
+beginning, *last = numbers
+print(beginning)
+print(last) # this time around the kay value for a is last / last=1
