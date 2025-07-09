@@ -73,3 +73,28 @@ moo(*my_list)
 
 my_dict = {"a": 1, "b": 2, "c": 3} # key values must match func
 moo(**my_dict) # must use two stars
+print("")
+##################### Local vs Global Variables ################################
+
+
+number = 0 # global var
+
+
+def mook():
+    global number 
+    number = 3 # told otherwise 
+    x = number
+    print("number inside function", x)
+
+
+
+mook() # will always print 0 bec of global number unless told otherwise
+print("")
+################# Call by object ######################################
+
+def lists(a_list):
+    a_list.append(4)
+
+my_list5 = [1, 2, 3]
+lists(my_list5)
+print(my_list5)
