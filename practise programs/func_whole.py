@@ -112,3 +112,10 @@ print(last) # this will be the key value for 6 last=6
 beginning, *last = numbers
 print(beginning)
 print(last) # this time around the kay value for a is last / last=1
+
+# merge a list 
+my_tuple1 = (1, 2, 3)
+my_list9 = [4, 5, 6]
+
+newest_list = [*my_tuple1, *my_list9]
+print(newest_list)
