@@ -29,3 +29,36 @@ foo1(1, 2, 3)
 # but you can still change the deault value as so
 foo1(1, 2, 3, 7) # the 7 will take the 4s position 
 print("")
+################################################################################
+# *args and **kwargs are special syntaxes that allow functions to accept a variable number of arguments. They provide flexibility when the exact number of arguments a function will receive is unknown at the time of its definition
+
+# The single asterisk * before a parameter name (conventionally args) in a function definition indicates that the function can accept an arbitrary number of non-keyword (positional) arguments.
+
+# one star means you ca pass any number of positional argemnts to your function
+# if you mark you parameter with two stars you can pass any number of [ key words] arguments to this function 
+
+def foo2(a, b, *args, **kwargs):
+    print(a, b)
+    for arg in args:
+        print(arg)
+    for key in kwargs:
+        print(key, kwargs[key])
+
+foo2(1, 2, 3, 4, 5, six=6, seven=7) # mix
+# 3, 4, 5 are args and six and seven are kwargs 
+print("")
+# this is another way to us epositional arguments
+
+def noo(a, b, *, c, d): # evrthng after the star must have a key or it wont work
+    print(a, b, c, d)
+noo(1, 2, c=3, d=8) # without the keys it wont work 
+print("")
+# same code above but difrent way
+def noo2(*args, last):
+    for arg in args:
+        print(arg)
+    print(last) #PUT OF OF THE LOOP OR IT WILL PRINT AFTER EACH ARG,1 100 2 100
+noo2(1, 2, 3, last=100)
+print("")
+
+######################## Unpacking Arguments ###################################
