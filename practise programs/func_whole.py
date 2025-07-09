@@ -62,3 +62,9 @@ noo2(1, 2, 3, last=100)
 print("")
 
 ######################## Unpacking Arguments ###################################
+def moo(a, b, c):
+    print(a, b, c)
+
+my_list = [0, 1, 2]
+moo(*my_list)
+# we place my list into th function then the * places the list into key argumets so a = 0 , b = 1 etc [ keep in mind the lengeth of your paramiter(list) must match the keys lenght in the function or it will blow up]
