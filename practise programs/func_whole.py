@@ -23,8 +23,9 @@ foo(c=1, b=2, a=3) # keys are abc , the order in which you place you keys and va
 # you also cant assign two keys to one value as in a=1 and a=2
 
 ## This is with default arguments d=4 ##
-def foo1(a, b, c, d=4): # default argument
+def foo1(a, b, c, d=4): # default argument # default can only be at the end
     print(a, b, c, d)
 foo1(1, 2, 3)
 # but you can still change the deault value as so
-foo1(1, 2, 3, 7) # the 7 will take the 4s position
+foo1(1, 2, 3, 7) # the 7 will take the 4s position 
+print("")
