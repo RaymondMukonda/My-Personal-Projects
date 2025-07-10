@@ -8,4 +8,3 @@ greeting.greet("rammy")
 g = greeting()
 g.greet("mosh")
 
-1
