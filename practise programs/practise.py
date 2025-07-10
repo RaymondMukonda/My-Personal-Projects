@@ -4,3 +4,8 @@ class greeting:
         print("Hello", name)
 
 greeting.greet("rammy")
+
+g = greeting()
+g.greet("mosh")
+
+g.pop()
