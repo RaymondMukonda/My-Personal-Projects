@@ -1,11 +1,10 @@
-class greeting:
+class sum1():
     @staticmethod
-    def greet(name):
-        print("Hello", name)
+    def math1(num):
+        tech = num * 2
+        print(tech)
 
-greeting.greet("rammy")
+num1 = sum1.math1(2)
 
-g = greeting()
-g.greet("mosh")
-
-1
+num1 = sum1()
+num1.math1(6)
