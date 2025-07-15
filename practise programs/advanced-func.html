@@ -7,6 +7,23 @@
 </head>
 <body>
     <script>
+
+        [
+            'make dinner',
+            'wash dishes',
+            'cook pap',
+            'fetch kids'
+        ].forEach(function(value, index) {
+            if (value === 'wash dishes') {
+                return;
+            }
+
+            console.log(index);
+            console.log(value);
+
+        });  // better then for loops
+
+
         setTimeout(function() {
             console.log('timeout');
         }, 3000); // will run after other code like a timer
@@ -14,6 +31,13 @@
         setInterval(function() {
             console.log('interval');
         }, 4000); //will run every 4seconds
+
+
+
+        //// arrow functions
+        const arrowFunction = () => {
+            console.log('heelo');
+        }
     </script>
 </body>
 </html>
