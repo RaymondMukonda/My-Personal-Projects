@@ -9,9 +9,11 @@
     <script>
         setTimeout(function() {
             console.log('timeout');
-        }, 3000);
+        }, 3000); // will run after other code like a timer
 
-        
+        setInterval(function() {
+            console.log('interval');
+        }, 4000); //will run every 4seconds
     </script>
 </body>
 </html>
