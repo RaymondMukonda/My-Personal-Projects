@@ -35,9 +35,22 @@
 
 
         //// arrow functions
-        const arrowFunction = () => {
+        const arrowFunction = (param, param2) => {
             console.log('heelo');
         }
+        // arroww has a few short cuts that regular dont have 
+        // these two codes are the same one is just easier
+        const regularFuction = function(param, param2) {
+            console.log('regular');
+        }
+        // exp if we have one parameter we dont have to use brackets
+        const onePram = param => {
+            console.log(param + 1);
+        }
+        onePram(2);
+        // another shortcut is that you can have it al in one line 
+        const oneLine = () => 2 + 3;
+        oneLine();
     </script>
 </body>
 </html>
