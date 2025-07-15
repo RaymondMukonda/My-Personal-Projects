@@ -24,7 +24,10 @@ function autoPlay() {
             playGame(playerMove);
         },1000);
         isAutoPlaying = true;
-    } else {}
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
 }
 
     
