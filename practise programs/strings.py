@@ -41,7 +41,7 @@ string4 = "hey %s %s how are you doing today? " %(name3, name2)
 #this is going to print out hello mukonda mosess intead of mosses mukonda bec of the way we set it in the format
 print(string4)
 print("")
-#here is another way to formate the string with f string
++#here is another way to formate the string with f string
 var = 3.1234567
 my_string5 = "the varibale is {:.2f}".format(var)#so you call what you want to formate and python places the value into the open brackets. .2f specifys how many decimal points pyton should go to.
 print(my_string5)# see output in terminal
