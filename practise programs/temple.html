@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="Picture Album">
+    <meta name="author" content="Raymond Mukonda">
+
+    <style>
+                /* MOBILE FIRST (≤529px) */
+        @media (max-width: 529px) {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation {
+            display: none;
+            flex-direction: column;
+            background: #2a4d69;
+            padding: 1rem;
+        }
+
+        .navigation.show {
+            display: flex;
+        }
+
+        nav a {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #4b86b4;
+        }
+
+        #menu {
+            display: block;
+            font-size: 2rem;
+            padding: .5rem .75rem;
+            background: #2a4d69;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #menu::before {
+            content: "☰";
+        }
+
+        #menu.show::before {
+            content: "❌";
+        }
+        }
+
+        /* MEDIUM (530px–779px) */
+        @media (min-width: 530px) and (max-width: 779px) {
+        .navigation {
+            display: none;
+            flex-direction: column;
+            background: #2a4d69;
+            padding: 1rem;
+        }
+
+        .navigation.show {
+            display: flex;
+        }
+
+        nav a {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #4b86b4;
+        }
+
+        #menu {
+            display: block;
+            font-size: 2rem;
+            padding: .5rem .75rem;
+            background: #2a4d69;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #menu::before {
+            content: "☰";
+        }
+
+        #menu.show::before {
+            content: "❌";
+        }
+        }
+
+        /* LARGE (≥780px) */
+        @media (min-width: 780px) {
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #4b86b4;
+        }
+
+        #menu {
+            display: none; /* hide hamburger */
+        }
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <a id="menu" href="#"></a>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <figure>
+      <img src="images/johannesburg-south-africa.webp" alt="Temple 1">
+      <figcaption>Johannesburg South Africa</figcaption>
+    </figure>
+    <figure>
+      <img src="images/aba_nigeria_temple.webp" alt="Temple 2">
+      <figcaption>Aba Nigeria</figcaption>
+    </figure>
+    <figure>
+      <img src="images/kirtland-temple.webp" alt="Temple 3">
+      <figcaption>Kirtland</figcaption>
+    </figure>
+    <!-- More figures ... -->
+  </main>
+
+  <footer>
+    <p>©2024 | Raymond Mukonda | South Africa</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+        // Show last modified date
+    document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Hamburger toggle
+    const mainnav = document.querySelector('.navigation');
+    const hambutton = document.querySelector('#menu');
+
+    hambutton.addEventListener('click', (e) => {
+    e.preventDefault();
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+    });
+
+  </script>
+</body>
+</html>
