@@ -18,7 +18,7 @@
 </head>
 <body>
     <button title="Good Job" class="red-button" onclick="
-        click();
+        doSomething();
         ">
         Hello
     </button>
@@ -27,13 +27,16 @@
         paragraph of <button class="yellow-button">hello</button>  text 
     </p>
 
-    <img src="/Html_Projects/images/channel-1.jpeg" width="100px" onclick="click();">
+    <img src="/Html_Projects/images/channel-1.jpeg" width="100px" onclick="doSomething();">
 
     <script>
-        function click()
+        function doSomething()
         {
             alert('found an easter egg');
         }
+
+        console.log(2 + 2);
+        
     </script>
 </body>
 </html>
