@@ -28,6 +28,19 @@
 
         console.log(computerMove);
 
+        let result = '';
+
+        if (computerMove === 'rock') {
+            result = 'Tie.';
+        } else if (computerMove === 'papar') {
+            result = 'You lose.';
+        } else if (computerMove === 'scissors') {
+            result = 'You Win!';
+        }
+
+        alert(`You picked rock computer picked ${computerMove}. ${result}`);
+
+
 
         
     ">
