@@ -9,12 +9,26 @@
     <script>
 
 
-        function function1(a, b) {
+       let result = function1(2,2); 
+
+        function function1(a, b = 5) {
             let num = a * b;
-            console.log(num);
+            return num;
         }
 
-        function1(2, 2);
+        
+
+        if (result  === 10){
+            console.log('User did not eneter a second value');
+        } else if (result === 4) {
+            console.log('User placed in 2 to be times by 2');
+        }
+
+        
+
+  
+
+        
 
 
         
