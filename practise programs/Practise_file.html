@@ -23,7 +23,7 @@
     </button>
 
     <button onclick="
-        playGame('scissiors');
+        playGame('scissors');
     ">
         Scissiors
     </button>
@@ -57,13 +57,13 @@
             
             } else if (playerMove === 'paper') {
                 if (computerMove === 'rock') {
-                    result = 'You win!.';
+                    result = 'You Win!.';
                 } 
                 else if (computerMove === 'paper') {
                     result = 'Tie.';
                 } 
                 else if (computerMove === 'scissors') {
-                    result = 'You lose';
+                    result = 'You lose.';
                 }
             } else if (playerMove === 'rock') {
                 if (computerMove === 'rock') {
@@ -81,7 +81,7 @@
                 score.wins += 1;
             } else if ( result === 'You lose.') {
                 score.losses += 1;
-            } else if ( result === tie) {
+            } else if ( result === 'Tie.') {
                 score.ties += 1;
             }
 
