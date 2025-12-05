@@ -16,15 +16,7 @@
 
         let result = '';
 
-        if (computerMove === 'rock') {
-            result = 'Tie.';
-        } 
-        else if (computerMove === 'paper') {
-            result = 'You lose.';
-        } 
-        else if (computerMove === 'scissors') {
-            result = 'You Win!';
-        }
+      
 
         alert(`You picked rock computer picked ${computerMove}. ${result}`);
 
@@ -37,21 +29,7 @@
     
     <button 
     onclick="
-        const computerMove = pickComputerMove();
-        
-        let result = '';
-
-        if (computerMove === 'rock') {
-            result = 'You win!.';
-        } 
-        else if (computerMove === 'paper') {
-            result = 'Tie.';
-        } 
-        else if (computerMove === 'scissors') {
-            result = 'You lose';
-        }
-
-        alert(`You picked paper computer picked ${computerMove}. ${result}`);
+        playGame('paper');
     "
     >
         Paper
@@ -82,6 +60,27 @@
                 } 
                 else if (computerMove === 'scissors') {
                     result = 'Tie';
+                }
+            
+            } else if (playerMove === 'paper') {
+                if (computerMove === 'rock') {
+                    result = 'You win!.';
+                } 
+                else if (computerMove === 'paper') {
+                    result = 'Tie.';
+                } 
+                else if (computerMove === 'scissors') {
+                    result = 'You lose';
+                }
+            } else if (playerMove === 'rock') {
+                if (computerMove === 'rock') {
+                    result = 'Tie.';
+                } 
+                else if (computerMove === 'paper') {
+                    result = 'You lose.';
+                } 
+                else if (computerMove === 'scissors') {
+                    result = 'You Win!';
                 }
             }
 
