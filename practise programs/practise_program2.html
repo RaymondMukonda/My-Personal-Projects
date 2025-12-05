@@ -9,17 +9,17 @@
     <script>
 
 
-       let result = function1(2,5); 
-
+        
         function function1(a, b = 5) {
             let num = a * b;
             return num;
         }
-
+        
+        let result = function1(2); 
         
 
         if (result  === 10){
-            console.log('User did not eneter a second value');
+            console.log('User used the default that was set');
         } else if (result === 4) {
             console.log('User placed in 2 to be times by 2');
         }
