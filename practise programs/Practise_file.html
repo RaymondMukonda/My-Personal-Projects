@@ -43,7 +43,7 @@
             ties: 0
         }
 
-        localStorage.getItem('message');
+        localStorage.getItem('score');
 
 
         function playGame(playerMove) {
@@ -93,7 +93,7 @@
                 score.ties += 1;
             }
 
-            localStorage.setItem('message', 'hello');
+            localStorage.setItem('score', JSON.stringify(score));
 
             alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}\n Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
         }
