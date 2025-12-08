@@ -40,7 +40,9 @@
         // this converts the object back to a javascrip code 
         let score = JSON.parse(localStorage.getItem('score'));
 
-        if (score === null) {
+
+        // this score === null is the same as !score
+        if (!score) {
             score = {
                 wins: 0,
                 losses: 0,
