@@ -38,7 +38,7 @@
 
     <script>
         // this converts the object back to a javascrip code 
-        const score = JSON.parse(localStorage.getItem('score'));
+        let score = JSON.parse(localStorage.getItem('score'));
 
         if (score === null) {
             score = {
