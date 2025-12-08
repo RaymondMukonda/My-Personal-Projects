@@ -36,14 +36,10 @@
 
 
     <script>
+        // this converts the object back to a javascrip code 
+        const score = JSON.parse(localStorage.getItem('score'));
 
-        const score = {
-            wins: 0,
-            losses: 0,
-            ties: 0
-        }
-
-        JSON.parse(localStorage.getItem('score'));
+        
  
 
         function playGame(playerMove) {
@@ -93,6 +89,7 @@
                 score.ties += 1;
             }
 
+            // this converts the java to Json string bec localstorage only takes strings
             localStorage.setItem('score', JSON.stringify(score));
 
             alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}\n Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
