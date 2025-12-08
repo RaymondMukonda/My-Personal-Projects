@@ -43,8 +43,8 @@
             ties: 0
         }
 
-        localStorage.getItem('score');
-
+        JSON.parse(localStorage.getItem('score'));
+ 
 
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
