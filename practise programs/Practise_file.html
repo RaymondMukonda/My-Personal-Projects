@@ -38,17 +38,22 @@
 
     <script>
         // this converts the object back to a javascrip code 
-        let score = JSON.parse(localStorage.getItem('score'));
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
 
+        // the code below does the same as above 
 
         // this score === null is the same as !score
-        if (!score) {
-            score = {
-                wins: 0,
-                losses: 0,
-                ties: 0
-            };
-        }
+        // if (!score) {
+        //     score = {
+        //         wins: 0,
+        //         losses: 0,
+        //         ties: 0
+        //     };
+        // }
         
  
 
