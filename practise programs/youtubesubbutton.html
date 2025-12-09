@@ -10,14 +10,15 @@
 
     <p>YouTube Subscribe Button</p>
     <button onclick="
-        const buttonElement = document.querySelector('.js-subscribe-button');
-
-        if (buttonElement.innerText === 'Subscribe') {
-            buttonElement.innerHTML = 'Subscribed';
-        } else {
-            buttonElement.innerHTML = 'Subscribe';
-        }
+       subscribe();
     " class="js-subscribe-button"> Subscribe </button>
+
+    <p>Amazon shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input">
+    <button onclick="
+        calculateTotal();
+    " >Calculate</button>
+    <p class="js-total-cost"></p>
 
 
 
@@ -30,13 +31,32 @@
     <script>
 
         
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
 
-        function dosomething() {
-            alert("Hello World");
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+            }
         }
 
-        const button = document.getElementById('my-button')
-        button.onclick = dosomething;
+
+        function calculateTotal() {
+            const inputElemnt = document.querySelector('.js-cost-input');
+            // line below is how you get a value from an empty text box
+            let cost = Number(inputElemnt.value);  
+
+            if (cost < 40) {
+                cost = cost + 10;
+                 
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+
+
     </script>
 </body>
 </html>
