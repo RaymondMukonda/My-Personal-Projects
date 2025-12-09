@@ -14,10 +14,14 @@
     " class="js-subscribe-button"> Subscribe </button>
 
     <p>Amazon shipping Calculator</p>
-    <input placeholder="Cost of order" class="js-cost-input">
+    <input 
+    placeholder="Cost of order" class="js-cost-input" onkeydown="console.log('typing')">
+
     <button onclick="
         calculateTotal();
-    " >Calculate</button>
+    " >Calculate
+    </button>
+    
     <p class="js-total-cost"></p>
 
 
