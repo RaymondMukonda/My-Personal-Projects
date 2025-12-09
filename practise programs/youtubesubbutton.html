@@ -15,13 +15,18 @@
 
     <p>Amazon shipping Calculator</p>
     <input 
-    placeholder="Cost of order" class="js-cost-input" onkeydown="console.log('typing')">
+    placeholder="Cost of order" class="js-cost-input" onkeydown="console.log(event.key);
+    if (event.key === 'Enter') {
+        calculateTotal();
+    }
+    ">
+    <!-- with key down if you console log it, you can see what the user typed  -->
 
     <button onclick="
         calculateTotal();
     " >Calculate
     </button>
-    
+
     <p class="js-total-cost"></p>
 
 
