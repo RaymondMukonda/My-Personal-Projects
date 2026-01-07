@@ -39,7 +39,7 @@ document.querySelector('.js-paper-button').addEventListener('click', () => {
     playGame('paper');
 }) 
 
-// This code keeps track of every button you press on your keyboard
+// This code keeps tracks of every button you press on your keyboard, but for this program it only listens for R P S
 document.body.addEventListener('keydown', (event) => {
     if (event.key === 'r') {
         playGame('rock');
