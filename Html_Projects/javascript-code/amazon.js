@@ -63,6 +63,6 @@ innerHTML = productsHTML;
 document.querySelectorAll('.js-add-to-cart')
  .forEach((button) => {
   button.addEventListener('click', () => {
-
+    console.log('added product');
   });
  });
