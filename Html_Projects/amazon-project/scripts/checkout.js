@@ -21,6 +21,8 @@ cart.forEach((cartItem) => {
         }
     });
 
+    console.log(matchingProduct);
+
     cartSummaryHTML += 
 
     `
