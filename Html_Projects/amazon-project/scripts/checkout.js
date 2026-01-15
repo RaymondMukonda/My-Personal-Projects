@@ -99,4 +99,5 @@ cart.forEach((cartItem) => {
     `;
 });
 
-console.log(cartSummaryHTML);
+document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+// This div contains all my check out html 
