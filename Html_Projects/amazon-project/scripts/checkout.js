@@ -55,6 +55,16 @@ cart.forEach((cartItem) => {
         }
     });
 
+    if (!deliveryOption && deliveryOptions.length > 0) {
+        deliveryOption = deliveryOptions[0]; 
+       
+    }
+    if (!deliveryOption) {
+        console.error('No delivery option found, and no fallback could be applied.');
+        return;
+    }
+
+
     const today = dayjs();
     const deliveryDate = today.add(
         deliveryOption.deliveryDays, 'days'
@@ -128,8 +138,9 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
         const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
         html += `
-        <div class="delivery-option js-delivery-option" data-product-id="${matchingProduct.id}" 
-        data-product-option-id="${deliveryOption.id}">
+        <div class="delivery-option js-delivery-option" 
+            data-product-id="${matchingProduct.id}"
+            data-delivery-option-id="${deliveryOption.id}">
             <input type="radio"
                 ${isChecked ? 'checked' : ''}
                 class="delivery-option-input"
@@ -162,15 +173,18 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
         const productId = link.dataset.productId;
         removeFromCart(productId);
         
-        const container = document.querySelector(`.js-cart-item-container-${productId}`);
+        const container = document.querySelector(
+            `.js-cart-item-container-${productId}`
+        );
         container.remove();
     });
- });
+});
 
 
- document.querySelectorAll('.js-delivery-option').forEach((element) => {
+document.querySelectorAll('.js-delivery-option')
+.forEach((element) => {
     element.addEventListener('click', () => {
-        const {productId, deliveryOptionId} = element.dataset 
+        const {productId, deliveryOptionId} = element.dataset;
         updateDeliveryOption(productId, deliveryOptionId);
     });
- });
+});
