@@ -35,7 +35,7 @@ cart.forEach((cartItem) => {
                 ${matchingProduct.name}
             </div>
             <div class="product-price">
-                ${matchingProduct.priceCents / 100}
+                ${(matchingProduct.priceCents / 100).toFixed(2)} // addes two decimals 
             </div>
             <div class="product-quantity">
                 <span>
