@@ -4,6 +4,9 @@ import {
 import {
     products
 } from '../data/products.js';
+import {
+    formatCurrency
+} from './money.js';
 
 let cartSummaryHTML = '';
 
@@ -35,7 +38,7 @@ cart.forEach((cartItem) => {
                 ${matchingProduct.name}
             </div>
             <div class="product-price">
-                ${(matchingProduct.priceCents / 100).toFixed(2)} // addes two decimals 
+                ${formatCurrency(matchingProduct.priceCents)}
             </div>
             <div class="product-quantity">
                 <span>
