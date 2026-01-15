@@ -12,6 +12,8 @@ import {
 
 hello();
 
+console.log(dayjs());
+
 
 
 let cartSummaryHTML = '';
