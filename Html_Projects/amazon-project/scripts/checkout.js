@@ -10,10 +10,18 @@ import {
     formatCurrency
 } from '../scripts/utils/money.js';
 
+import {
+    hello
+} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js' // instead of adding to a script which causes naming
+                                                          //   problmes we import straight from the internet
+
+import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+
 hello();
 
-console.log(dayjs());
-
+const today = dayjs();
+const deliveryDate = today.add(7, 'days');
+console.log(deliveryDate.format('dddd, MMMM D'));
 
 
 let cartSummaryHTML = '';
