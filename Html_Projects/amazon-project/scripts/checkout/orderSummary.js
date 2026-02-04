@@ -3,7 +3,7 @@ import {
 } from '../../data/cart.js';
 
 import {
-    products
+    products, getProduct
 } from '../../data/products.js';
 
 import {
@@ -35,13 +35,7 @@ export function renderOrderSummary() {
     cart.forEach((cartItem) => {
         const productId = cartItem.productId;
 
-        let matchingProduct;
-
-        products.forEach((product) => {
-            if (product.id === productId) {
-                matchingProduct = product;
-            }
-        });
+        const matchingProduct = getProduct(productId);
 
 
         const deliveryOptionId = cartItem.deliveryOptionId;
