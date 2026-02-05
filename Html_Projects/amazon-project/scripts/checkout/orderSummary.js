@@ -21,6 +21,10 @@ import {
     deliveryOptions, getDeliveryOption
 } from '../../data/deliveryOptions.js';
 
+import {
+    renderPaymentSummary
+} from './paymentSummary.js';
+
 hello();
 
 const today = dayjs();
@@ -164,6 +168,8 @@ export function renderOrderSummary() {
                 `.js-cart-item-container-${productId}`
             );
             container.remove();
+
+            renderPaymentSummary();
         });
     });
 
