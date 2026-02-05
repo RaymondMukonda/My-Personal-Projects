@@ -14,12 +14,11 @@ import {
     hello
 } from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js' // instead of adding to a script which causes naming
                                                           //   problmes we import straight from the internet
-
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js'; // default export used when you want
                                                                               // to export one thing only
 
 import {
-    deliveryOptions
+    deliveryOptions, getDeliveryOption
 } from '../../data/deliveryOptions.js';
 
 hello();
@@ -41,14 +40,7 @@ export function renderOrderSummary() {
         const deliveryOptionId = cartItem.deliveryOptionId;
 
 
-        let deliveryOption;
-
-
-        deliveryOptions.forEach((option) => {
-            if (option.id === deliveryOptionId) {
-                deliveryOption = option;
-            }
-        });
+        const deliveryOption = getDeliveryOption(deliveryOptionId);
 
         if (!deliveryOption && deliveryOptions.length > 0) {
             deliveryOption = deliveryOptions[0]; 
