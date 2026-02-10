@@ -24,19 +24,17 @@
 
         function ChatInput() {
             return  (
-                <div>
-                    <input />
+                <>
+                    <input placeholder="hello" />
                     <button>Send</button>
-                </div>
+                </>
             );
         }
 
         const div = (
 
             <div>
-                <button>Hello</button>
-                <p>paragraph of the text {2 + 2}</p>
-                {ChatInput()}
+                <ChatInput />
             </div>
         );
 
