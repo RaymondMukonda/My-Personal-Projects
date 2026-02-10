@@ -25,22 +25,22 @@
         function ChatInput() {
             return  (
                 <>
-                    <input placeholder="hello" />
+                    <input placeholder="Send a message to ChatBot" />
                     <button>Send</button>
                 </>
             );
         }
 
-        const div = (
+        const app = (
 
-            <div>
+            <>
                 <ChatInput />
-            </div>
+            </>
         );
 
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(div);
+      ReactDOM.createRoot(container).render(app);
     </script>
 </body>
 </html>
