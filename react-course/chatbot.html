@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>react-basics</title>
+    <title>Chat-Bot</title>
 </head>
 <body>
     <div class="js-container"></div>
@@ -21,15 +21,22 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-        const button = <button >hello</button>;
-        const paragraph = <p>paragraph of the text</p>;
 
+        function ChatInput() {
+            return  (
+                <div>
+                    <input />
+                    <button>Send</button>
+                </div>
+            );
+        }
 
         const div = (
 
             <div>
                 <button>Hello</button>
                 <p>paragraph of the text {2 + 2}</p>
+                {ChatInput()}
             </div>
         );
 
