@@ -21,12 +21,21 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-    const button = <button >hello</button>;
-    const paragraph = <p>paragraph of the text</p>;
+        const button = <button >hello</button>;
+        const paragraph = <p>paragraph of the text</p>;
+
+
+        const div = (
+
+            <div>
+                <button>Hello</button>
+                <p>paragraph of the text</p>
+            </div>
+        );
 
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(button);
+      ReactDOM.createRoot(container).render(div);
     </script>
 </body>
 </html>
