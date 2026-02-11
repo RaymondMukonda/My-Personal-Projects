@@ -32,12 +32,27 @@
         }
 
 
-        function ChatMessage(){
+        function ChatMessage(props){
+
+            const {message} = props;
+            // const message = props.message; this code is the same as above (destructuring)
+            const sender = props.sender;
+
+
+            if (sender === 'robot') {
+                return (
+                    <div>
+                        <img src="robot.png" width="50" />
+                        {message}
+                    </div>
+                );
+            }
+
             return (
-                <>
-                    hello chatbot
+                <div>
+                    {message}
                     <img src="./user.png" width="50" />
-                </>
+                </div>
             );
         }
 
@@ -45,7 +60,10 @@
 
             <>
                 <ChatInput />
-                <ChatMessage />
+                <ChatMessage message="hello chatbot" sender="user" />
+                <ChatMessage message="Hello! How can i help you?" sender="robot" />
+                <ChatMessage message="can you get me the date?" sender="user" />
+                <ChatMessage message="Today is September 27th" sender="robot" />
             </>
         );
 
