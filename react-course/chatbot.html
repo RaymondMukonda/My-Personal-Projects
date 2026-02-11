@@ -62,6 +62,29 @@
         }
 
         function App() {
+            const chatMessages = [{
+                message: 'hello chatbot',
+                sender: 'user'
+            }, {
+                message: 'Hello! How can i help you?',
+                sender: 'robot'
+            }, {
+                message: 'can you get me todays date?',
+                sender: 'user'
+            }, {
+                message: 'Today is September 27th',
+                sender: 'robot'
+            }]; 
+
+            chatMessages.map((chatMessage) => {
+                return (
+                    <ChatMessage 
+                        message = {chatMessage.message}
+                        sender = {chatMessage.sender}
+                    />
+                );
+            });
+
             return (
                 <>
                     <ChatInput />
