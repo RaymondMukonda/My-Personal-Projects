@@ -76,22 +76,18 @@
                 sender: 'robot'
             }]; 
 
-            chatMessages.map((chatMessage) => {
-                return (
-                    <ChatMessage 
-                        message = {chatMessage.message}
-                        sender = {chatMessage.sender}
-                    />
-                );
-            });
-
             return (
                 <>
                     <ChatInput />
-                    <ChatMessage message="hello chatbot" sender="user" />
-                    <ChatMessage message="Hello! How can i help you?" sender="robot" />
-                    <ChatMessage message="can you get me the date?" sender="user" />
-                    <ChatMessage message="Today is September 27th" sender="robot" />
+                    {chatMessages.map((chatMessage) => {
+
+                        return (
+                            <ChatMessage 
+                                message = {chatMessage.message}
+                                sender = {chatMessage.sender}
+                            />
+                        );
+                    })}
                 </>
             );
 
