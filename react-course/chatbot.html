@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
 
-        function ChatInput() {
+        function ChatInput({chatMessages, setChatMessages}) {
             const [inputText, setInputText] = React.useState('');
 
             function saveInputText(event){
@@ -30,12 +30,24 @@
             }
 
             function sendMessage(){
-                console.log(inputText);
+                setChatMessages([
+                    ...chatMessages,
+                    {
+                        message: inputText,
+                        sender: 'user',
+                        id: crypto.randomUUID()
+                    }
+                ]);
+
+                setInputText('');
             }
 
             return  (
                 <>
-                    <input placeholder="Send a message to ChatBot" size="30" onChange={saveInputText}/>
+                    <input placeholder="Send a message to ChatBot" size="30" onChange={saveInputText}
+                    value = {inputText}
+                    />
+                    
                     <button onClick={
                         sendMessage
                     }>Send</button>
@@ -73,7 +85,26 @@
             );
         }
 
-        function ChatMessages() {
+        function ChatMessages({chatMessages}) {
+            return (
+                <>
+
+                    {chatMessages.map((chatMessage) => {
+
+                        return (
+                            <ChatMessage 
+                                message = {chatMessage.message}
+                                sender = {chatMessage.sender}
+                                key = {chatMessage.id}
+                            />
+                        );
+                    })}
+                </>
+            );
+
+        }
+
+        function App() {
             const [chatMessages, setChatMessages] = React.useState([{
                 message: 'hello chatbot',
                 sender: 'user',
@@ -98,42 +129,16 @@
             // const setChatMessages = array[1];
            
 
-            function sendMessage() {
-                setChatMessages([
-                    ...chatMessages,
-                    {
-                        message: 'test',
-                        sender: 'user',
-                        id: crypto.randomUUID()
-                    }
-                ]);
-            }
-
             return (
                 <>
+                    <ChatInput 
+                    chatMessages={chatMessages}
+                    setChatMessages={setChatMessages}
+                    />
+                    <ChatMessages 
+                        chatMessages={chatMessages}
 
-                    <button onClick={sendMessage}>Send message</button>
-
-                    {chatMessages.map((chatMessage) => {
-
-                        return (
-                            <ChatMessage 
-                                message = {chatMessage.message}
-                                sender = {chatMessage.sender}
-                                key = {chatMessage.id}
-                            />
-                        );
-                    })}
-                </>
-            );
-
-        }
-
-        function App() {
-            return (
-                <>
-                    <ChatInput />
-                    <ChatMessages />
+                    />
                 </>
             );
 
