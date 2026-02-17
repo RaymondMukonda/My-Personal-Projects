@@ -82,7 +82,13 @@
             }]; 
 
             function sendMessage() {
-                console.log('hello ');
+                chatMessages.push({
+                    message: 'test',
+                    sender: 'user',
+                    id: crypto.randomUUID()
+                });
+
+                console.log(chatMessages)
             }
 
             return (
