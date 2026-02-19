@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat-Bot</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .send-button {
             background-color: rgb(130, 248, 183);
             color: white;
@@ -20,7 +24,39 @@
             padding: 12px 14px;
             border-radius: 10px;
             border-width: 1px;
+            font-size: 15px;
+
+            flex-grow: 1;
         }
+
+        .chat-input-container {
+            display: flex;
+    
+        }
+
+
+        .app-container {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chat-message-user {
+            display: flex;
+            justify-content: end;
+        }
+
+        .chat-message-robot {
+            display: flex;
+        }
+
+        .chat-message-text {
+            background-color: rgb(238, 238, 238);
+            
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -76,17 +112,17 @@
             }
 
             return  (
-                <>
+                <div className="chat-input-container">
                     <input placeholder="Send a message to ChatBot" size="30" onChange={saveInputText}
                     value = {inputText}
                     className="chat-input"
                     />
 
                     <button 
-                        onCllick={sendMessage}
+                        onClick={sendMessage}
                         className="send-button"
                     >Send</button>
-                </>
+                </div>
             );
         }
 
@@ -108,11 +144,13 @@
             // } short cut for the line below
 
             return (
-                <div>
+                <div className={sender === 'user' ? 'chat-message-user' : 'chat-message-robot'}>
                     {sender === 'robot' && (
                         <img src="robot.png" width="50" />
                     )}
-                    {message}
+                    <div className="chat-message-text">
+                        {message}
+                    </div>
                     {sender === 'user' && (
                         <img src="./user.png" width="50" />
                     )}
@@ -165,7 +203,7 @@
            
 
             return (
-                <>
+                <div className="app-container">
                     <ChatInput 
                     chatMessages={chatMessages}
                     setChatMessages={setChatMessages}
@@ -174,7 +212,7 @@
                         chatMessages={chatMessages}
 
                     />
-                </>
+                </div>
             );
 
         }
