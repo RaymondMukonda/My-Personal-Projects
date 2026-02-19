@@ -6,13 +6,20 @@
     <title>Chat-Bot</title>
     <style>
         .send-button {
-            background-color: rgb(109, 244, 109);
+            background-color: rgb(130, 248, 183);
             color: white;
             padding: 12px 20px;
             border-radius: 10px;
             margin-left: 10px;
             border: none;
             font-size: 15px;
+            cursor: pointer;
+        }
+
+        .chat-input{
+            padding: 12px 14px;
+            border-radius: 10px;
+            border-width: 1px;
         }
     </style>
 </head>
@@ -72,6 +79,7 @@
                 <>
                     <input placeholder="Send a message to ChatBot" size="30" onChange={saveInputText}
                     value = {inputText}
+                    className="chat-input"
                     />
 
                     <button 
