@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="countdown"></h1>
+    <button id="startButton" onclick="startButton();">Start</buttton>
+
+<h1 id="countdown"></h1>
+<button id="startButton">Start</button>
+
+<script>
+  const countDownDisplay = document.getElementById('countdown');
+  const startButton = document.getElementById('startButton');
+
+  let timeLeft = 10;   // starting countdown value
+  let timerId;         // store interval ID
+
+  startButton.addEventListener('click', () => {
+    // Prevent multiple intervals stacking
+    if (timerId) clearInterval(timerId);
+
+    timeLeft = 10; // reset countdown each time button is clicked
+
+    timerId = setInterval(() => {
+      if (timeLeft >= 0) {
+        countDownDisplay.textContent = timeLeft;
+        timeLeft--;
+      } else {
+        clearInterval(timerId); // stop the countdown
+        countDownDisplay.textContent = "Time's up!";
+      }
+    }, 1000);
+  });
+</script>
+</body>
+</html>
