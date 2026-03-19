@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        button {
+            padding: 0.75rem;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            border: 1px;
+            background-color: #dad;
+        }
+
+        #users {
+            margin: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Consuming a Mock API Service</h1>
+    <button type="button">Get Users</button>
+    <ul id="users"></ul>
+
+    <script>
+        const userList = document.getElementById("users");
+        const getButton = document.querySelector("button");
+
+        async function fetchAndDisplayUsers() {
+            try {
+                const apiUrl = "https://jsonplaceholder.typicode.com/users";
+                const response = await fetch(apiUrl);
+
+                // Handle HTTP errors (e.g., 404 Not Found, 500 Server Error)
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok. Status: ${response.status}`);
+                }
+
+                const users = await response.json(); // await promised response
+
+                users.forEach((user) => {
+                    // build figure content
+                    const li = document.createElement("li");
+                    li.innerHTML = `<strong>${user.name}</strong> | ${user.email}`;
+                    userList.appendChild(li);
+                });
+            } catch (error) {
+                userList.innerHTML = `Could not load users: Error: ${error.message}`;
+            }
+        }
+
+        getButton.addEventListener("click", fetchAndDisplayUsers);
+    </script>
+</body>
+</html>
