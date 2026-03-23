@@ -1,15 +1,12 @@
-let userRole = "editor";
+const prompt = require("prompt-sync")();
 
-switch (userRole) {
-  case "admin":
-    console.log("Access granted: Full control");
-    break;
-  case "editor":
-    console.log("Access granted: Can edit content");
-    break;
-  case "viewer":
-    console.log("Access granted: Read-only mode");
-    break;
-  default:
-    console.log("Access denied: Unknown role");
+let age = Number(prompt("Enter your age: "));
+
+let votable;
+if (Number.isNaN(age)) {
+  votable = "input is not a number";
+} else {
+  votable = (age < 18) ? "too young" : "old enough";
 }
+
+console.log(votable);
