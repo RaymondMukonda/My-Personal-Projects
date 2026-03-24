@@ -1,25 +1,21 @@
-const prompt = require("prompt-sync")();
+const userInput = require('prompt-sync')();
 
-let country = 'south africa';
-let ageDrive = 18;
-let userName = '';
-let usersurName = '';
+let name1 = userInput('please enter the first name: ');
+let name2 = userInput('please enter the second name: ');
 
-let user = prompt('Please enter your country of origin: ');
-userName = prompt('Please enter your name: ');
-usersurName = prompt('Please enter your  surname: ');
 
-if (user == country) {
-  console.log(`Hi the ${userName} ${usersurName}  fellow south african !!`);
-  let userAge = Number(prompt('Please enter your age: '));
-
-  if (userAge >= 18)
-  {
-    console.log('you are well over age to drive');
-  } else {
-    console.log('you are still young to drive');
+class Person {
+  constructor(name) {
+    this.name = name;
   }
-
-} else {
-  console.log('sorry you not south african');
+  talk() {
+    return `${this.name} is talking`;
+  }
 }
+
+const me = new Person(name1);
+const you = new Person(name2);
+
+
+
+console.log(`hello ${me.name} and ${you.name} im honred to meet you both`);
