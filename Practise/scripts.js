@@ -1,21 +1,79 @@
-const userInput = require('prompt-sync')();
-
-let name1 = userInput('please enter the first name: ');
-let name2 = userInput('please enter the second name: ');
-
-
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-  talk() {
-    return `${this.name} is talking`;
-  }
+let sum = (x, ...y) => {
+    let addind = x + y;
+    let minus = addind - 5;
+    return minus;
 }
 
-const me = new Person(name1);
-const you = new Person(name2);
+let result = sum(5, 5, 5);
+const add5 = 5 + result;
+console.log(result);
+console.log('5 has been added to result giving: ' + add5);
 
 
 
-console.log(`hello ${me.name} and ${you.name} im honred to meet you both`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log();
