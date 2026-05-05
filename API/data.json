@@ -1,5 +1,13 @@
-{
-  "name": "Rammy",
-  "school": "byu",
-  "year": 2026
-}
+[
+  {
+    "name": "Rammy",
+    "school": "byu",
+    "year": 2026
+  },
+  {
+    "name": "Josh",
+    "school": "mit",
+    "year": 2025
+  }
+]
+
