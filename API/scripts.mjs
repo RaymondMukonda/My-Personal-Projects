@@ -1,25 +1,23 @@
 async function getData() {
   try {
-    const response = await fetch("https://raw.githubusercontent.com/RaymondMukonda/My-Personal-Projects/main/API/data.json");
-    const students = await response.json();
-    console.log(students);
+    const response = await fetch('./data.json');
+    const data = await response.json();
 
-    const me = greetUser(students[0]);
-    const you = greetUser(students[1]);
+    const me = greetStudents(data[0]);
+    const you = greetStudents(data[1]);
+    
 
   } catch (error) {
-    console.error("There was an error:", error);
+    console.log('There has been an error: ',error)
   }
 }
 
-getData();
 
-
-function greetUser(student) {
-  console.log(`Hello ${student.name} from ${student.school}, year ${student.year}`);
+function greetStudents(user){
+  console.log(`Hello ${user.name} we see that you current school with ${user.school} and started in ${user.year} `)
 }
 
-
+getData();
 
 
 
