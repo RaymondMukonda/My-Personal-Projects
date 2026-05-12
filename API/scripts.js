@@ -1,4 +1,4 @@
-
+import { greetUser } from "./arrow.js";
 
 let me;
 let you;
@@ -33,7 +33,34 @@ async function start() {
 
     greetStudents(me);
     greetStudents(you);
+
+    const personOne = document.getElementById('btn1');
+    const personTwo = document.getElementById('btn2');
+
+    attachUserToButton(personOne, me);
+    attachUserToButton(personTwo, you);
+
+    
 }
 
 start();
 
+
+// make reuseble code 
+function attachUserToButton(button, user) {
+  button.addEventListener('click', () => {
+    button.innerHTML = `Name: ${user.name}<br>School: ${user.school}<br>Year: ${user.year}`;
+  });
+}
+
+
+async function greetPeople () {
+  await getData();
+  greetUser(me);
+
+}
+
+greetPeople();
+
+
+ 
