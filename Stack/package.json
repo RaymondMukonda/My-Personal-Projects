@@ -1,0 +1,22 @@
+{
+  "name": "stack",
+  "version": "1.0.0",
+  "description": "Intro to back end",
+  "license": "ISC",
+  "author": "Raymond Mukonda",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node ./src/server.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0"
+  }
+}
