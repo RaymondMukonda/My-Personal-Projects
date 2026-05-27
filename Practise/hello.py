@@ -1,10 +1,28 @@
-x = int(input('Please place a number x: '))
-y = int(input('Please place a number y: '))
+people = [
+    {
+        'name': 'Rammy', 
+        'number': '+06711057'
 
-if y < x:
-    print('x is greater then   y')
-elif y > x:
-    print("y is greater thens x")
-else:
-    print("they equal")
- 
+    },
+    {
+        'name': 'Mike', 
+        'number': '+036711057'
+
+    },
+    {
+        'name': 'Miyon',
+        'number': '+076711057'
+
+    }
+]
+
+name = input('Please enter your name: ')
+
+for person in people:
+    if person['name'] == name:
+        number = person['number']
+        print(f'{name} Number was found {number}')
+        break
+    else:
+        print('not found')
+        break
