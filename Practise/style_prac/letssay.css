@@ -1,0 +1,101 @@
+footer {
+  position: fixed;   /* stays in place */
+  bottom: 0;         /* at the bottom */
+  left: 0;           /* align to left edge */
+  width: 100%;       /* span full width */
+  background: #333;  /* optional styling */
+  color: white;      /* optional text color */
+  text-align: center;
+  padding: 1rem;
+    display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 20px;               /* spacing between items */
+}
+
+
+/*  
+
+You used position: fixed; bottom: 0; left: 0; width: 100%;.
+
+That makes the footer detach from the normal flow of the document and stick directly to the viewport edges.
+
+So even if the <body> has its default margin, the footer ignores it because fixed positioning anchors it to the browser window itself, not the body’s content box.
+
+
+*/
+
+
+header {
+  background: greenyellow;
+  padding: 1rem;
+  width: 100%;
+  display: flex;               /* flex container */
+  justify-content: space-between; /* image left, nav pushed away */
+  align-items: center;         /* vertical alignment */
+}
+
+header img1 {
+    justify-content: left;
+}
+
+body {
+    margin: 0;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    
+}
+
+.img1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;  /* center vertically inside nav */
+  align-items: center;      /* center horizontally inside nav */
+  gap: 20px; /* center the links inside nav */
+  flex: 1; /* let nav expand to take space */
+}
+
+
+/* 
+
+justify-content: space-between on the header pushes the image to the far left and the nav to the far right.
+
+Adding flex: 1 to the nav makes it stretch across the header, so when you use justify-content: center inside nav, the links sit in the middle of that space.
+
+*/
+
+/* 
+🔹 What flex: 1 does
+flex: 1 is shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0;.
+
+It tells the element (in this case, your <nav>) to grow and take up all available space in the flex container (the header).
+
+Without flex: 1, the <nav> only takes up as much width as its content (the links). That’s why it hugs the right edge when you use justify-content: space-between on the header.
+
+With flex: 1, the <nav> expands to fill the space between the image and the right edge. Then, because you set justify-content: center inside the nav, the links are centered within that expanded space.
+
+
+Without flex: 1 → your <nav> only takes up as much width as its links. Since the header is display: flex; justify-content: space-between;, the browser pushes the image to the far left and the nav (with its small width) to the far right. That’s why the links sit at the edge.
+
+With flex: 1 → the <nav> is told: “grow to fill all the leftover space in the header.” Now the nav stretches across the header alongside the image’s space. Inside that stretched nav, you’ve set justify-content: center, so the links are centered within the nav’s expanded area.
+*/
+
+
+/* style the nav img  */
+.img1:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+#logo {
+    font-size: large;
+
+}
+
